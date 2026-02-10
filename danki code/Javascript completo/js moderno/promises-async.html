@@ -1,0 +1,53 @@
+<html>
+<body>
+    <script>
+
+/*
+function testes(){
+    return new Promise((resolve,reject)=>{
+        
+        const erro = true;
+        if(erro){
+            reject('erro...');
+        }else{
+         
+            resolve("A promise foi resolvida com sucesso");
+        }
+
+
+    })
+}
+
+testes().then(function(res){
+    alert(res);
+}).catch(function(err){
+    alert(err)
+})
+ */
+
+ function testes(){
+    return new Promise(function(resolve,reject){
+        setTimeout(function(){
+            const erro = false;
+            if(erro){
+                reject('erro...');
+            }else{
+                resolve("a promise foi resolvida");
+            }
+        },5000)
+    })
+ }
+
+ async function testes2(){
+    await testes().then(function(res){
+        alert(res);
+    });
+    alert('ola');
+ }
+
+ testes2();
+
+        
+    </script>
+</body>
+</html>

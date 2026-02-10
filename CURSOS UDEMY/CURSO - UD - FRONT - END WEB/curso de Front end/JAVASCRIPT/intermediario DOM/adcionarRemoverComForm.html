@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        li{
+            width: 220px;
+            background-color: lightblue;
+            padding: 10px 10px;
+            margin: 5px;
+            list-style: none;
+        }
+        li:hover{
+            background-color: lightseagreen;
+            cursor: pointer;
+        }
+        
+           
+       
+    </style>
+
+    <h1>Adicionando elementos dentro da UL > li </h1>
+
+   
+
+   <form onsubmit="event.preventDefault(); adicionar()"><!-- <form>: cria um formulário.
+onsubmit="event.preventDefault(); adicionar()": quando o formulário é submetido 
+(ex.: botão type="submit" clicado), evita o comportamento padrão (recarregar a página) 
+com event.preventDefault() e chama a função adicionar().-->
+  <input type="text" id="textoItem" placeholder="Digite algo..." >
+  <button type="submit">Adicionar</button>
+  <button type="button" onclick="remover()">Remover último</button>
+</form>
+
+<ul id="itens"></ul>
+   <!-- Adcionar e remover itens da lista -->
+
+  
+
+    <script>
+
+const ul = document.getElementById('itens')
+let contador = 0
+
+function adicionar(){ 
+  const input = document.getElementById('textoItem') // pega o valor do input
+  const valor = input.value.trim() // remove espaços extras
+
+  if (valor === "") return // impede adicionar vazio
+
+  contador++
+  const texto = document.createTextNode(`${valor} ${contador}`) // usa o texto digitado + número
+  const li = document.createElement('li')
+  li.appendChild(texto)
+  ul.insertBefore(li, ul.children[0])// adicionar na parte de cima 
+
+  input.value = "" // limpa o campo depois de adicionar
+}
+
+function remover(){
+  if (ul.lastElementChild) {
+    ul.removeChild(ul.lastElementChild)
+    contador--
+  }
+}
+      
+         
+
+        
+        
+    
+       
+
+    </script>
+    
+</body>
+</html>

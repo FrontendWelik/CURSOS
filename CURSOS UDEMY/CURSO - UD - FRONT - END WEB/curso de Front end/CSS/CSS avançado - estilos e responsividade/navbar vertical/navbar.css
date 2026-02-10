@@ -1,0 +1,38 @@
+#menu ul{/*sao as minhas classes pais menu e pai de ul */
+    list-style-type:none;/*limpar o estilo de lista*/
+    padding: 0;/*por padrao a ul tem um espaçamento interno declarando o valor zero voce limpa esse espaço*/
+    width: 200px;/*definindo o tamanho da minha div */
+}
+
+#menu li a {/*esses elementos filho de menu e ul - estou chamando os elementos que estao dentro da ID que sao meu blocos*/
+    display: block;/*colocando o elemento em bloco , por padrao o LINK é inline*/
+    padding: 0.5em 1.5em;/*dando um espaçamento interno do meu bloco de Link*/
+    color: black;/*aplicando a cor do texto do meu link*/
+    text-decoration: none;/*por padrao meu link esta com uma figura a baixo dele , isso serve para limpar*/
+    /*text-align: center;*/ /*centralizar o texto dentro do meu bloco*/
+                                            /*aqui definimos:para nao repetir a imagem , o lugar onde vai ficar, e se ele ficara no centro acima ou em baixo*/
+    background: rgb(0, 140, 255) url("../img/seta.png") no-repeat 0.3em center;/*colocar uma cor no meus blocos, e no mesmo elemento definir uma imagem os pontos servem para voltar diretorios(...)  */
+    background-size: 15px;/*definir o tamanho da imagem que foi colocado */
+
+
+
+
+}
+
+#menu li a:hover{
+    padding-left: 2.5em;
+    background: #05e499 url("../img/seta.png") no-repeat 1.5em center;
+    color: white;
+    background-size: 15px
+}
+
+#menu li a:active {/* serve para que o item quando clicado apareça ser ativado */
+    background-color:#05e499 ;
+}
+
+#menu li.selecionado a{/*isso serve para voce criar uma classe e colocar em cada link de sua pagina para ele marcar qual esta selecioonada*/
+    padding-left: 2.5em;
+    background: #05e499  url("../img/seta.png") no-repeat 1.5em center;
+    color: white;
+    background-size: 15px
+}

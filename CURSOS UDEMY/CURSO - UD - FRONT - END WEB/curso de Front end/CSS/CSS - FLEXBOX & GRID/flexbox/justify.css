@@ -1,0 +1,54 @@
+body{
+    background-color: black;
+    font-size:15px ;
+    color: white;
+}
+
+
+.container-flex{
+    height: 180px;/*define taamnho da largura */
+    border: 4px solid red;
+    display: flex;/*muda o display que é em bloco pra linhas*/
+    flex-direction: column;/*colum: abaixo do outro -  row: colocar os elementos um do lado do outro  */
+    justify-content: space-between;/*alinhamento das divs dentro do container*/
+    /*utilizando felx-direction e justufy-content , voce pode definir como os elementos ficaram exemplo
+    flex-direction: column; -  justify-content: space-evenly; - 
+    direction:column eles ficaram um abaixo do outro 
+    content:space-evelyn eles teram espaços iguais entre eles , e assim vai com cada um referindo-se aos seus elementos
+    */
+
+
+}
+
+.container-flex > div{
+    color: white;
+    padding: 4px;/* espaçamento interno */
+    margin: 4px;/* margem dos elementos  */
+    border: 4px solid white;
+}
+
+
+.container-flex2{
+    margin-top: 20px;
+    height: 180px;/*define taamnho da largura */
+    border: 4px solid red;
+    display: flex;/*muda o display que é em bloco pra linhas*/
+    flex-direction: row;/*colum: abaixo do outro -  row: colocar os elementos um do lado do outro  */
+    justify-content: space-around;/*alinhamento das divs dentro do container*/
+    /*utilizando felx-direction e justufy-content , voce pode definir como os elementos ficaram exemplo
+    flex-direction: column; -  justify-content: space-evenly; - 
+    direction:column eles ficaram um abaixo do outro 
+    content:space-evelyn eles teram espaços iguais entre eles , e assim vai com cada um referindo-se aos seus elementos
+    */
+
+
+}
+
+.container-flex2 > div{
+    color: white;
+    padding: 4px;/* espaçamento interno */
+    margin: 4px;/* margem dos elementos  */
+    border: 4px solid white;
+}
+
+/* */

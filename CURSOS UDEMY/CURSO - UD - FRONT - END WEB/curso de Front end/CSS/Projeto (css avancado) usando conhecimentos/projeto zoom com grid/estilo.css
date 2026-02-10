@@ -1,0 +1,212 @@
+
+/*para centralizar a barra de navegação vamos criar um container e centraliza-lo por ele */
+.container{/*classe pai container*/
+    
+    max-width: 1200px;/*largura maxima */
+    margin: 0 auto;/*utilizando para centralizar o container apartir das margens, de superior e inferior  */
+    display: grid;/*ele muda o fluxo do display*/
+    grid-template-columns: 1fr 1fr;/*fazendo que o grid fique em colunas */
+
+
+    /* organizando os conteudos com grid */
+    grid-template-areas:
+      'cabecalho cabecalho'/*utilizando grid-template-columns voce cria duas colunas , 
+       e voce precisa colocar o nome dos tlamplate areas um d lado do outro para que eles
+       fiquem um do lado do outro no site*/
+      'capa-conteudo capa-imagem'
+      
+      'organizacao-imagem organizacao-conteudo'
+    ;/*serve para colocar os elementos em areas especificas, nomeando as divs filhos e utilizando na classe pai*/
+    row-gap: 20px;/*define os espaços vereticais entre as linhas dentro do grid*/
+    column-gap: 20px;/*define os espçaos dentro do grid entre oos elmentos eas colunas */
+
+    padding: 0 10px;
+}
+
+
+/*ao definir o header como flex, voce o coloca como um container , e as outras tags sao items , e comandos como justify-content nao vao funcionar 
+para isso voce vai ter que declarar que os itens tambem virem container com o display: flex*/
+
+header{/*tag pai que vai dar dimeção a todo o container */
+
+    grid-area: cabecalho;/*é o grid que vai conter o nome na dv filho pra se usar na clsse pai*/
+
+    display: flex;/*ele vai pegar cada item que estiver dentro da tag e colocar um do lado do outro*/
+
+    align-items: center;/*ele ira alinhar no eixo vertical os items */
+
+    
+
+    padding: 0 10px ;/* espaçanto interno*/
+
+ 
+}
+
+section#capa-conteudo{
+       grid-area: capa-conteudo;/*é o grid que vai conter o nome na dv filho pra se usar na clsse pai*/
+       
+       display: flex;/* muda o fluxo do elemento para flex */
+       flex-direction: column;/*ele faz com que o fluxo flex se ajeite em colunas impilhando os de cima para baixo
+       utilizado junto com o display flex*/
+       justify-content: center;/*alinha os elementos dentro do div flexivel*/
+       /*nesse caso com tem um botao dentro do elemento ele vai preencher todo os espaçamentos , ai voce tem que ir
+       no elemento boatao e utilizar um align-self = alihar somente o proprio elemento*/
+
+}
+section#capa-imagem{
+       grid-area: capa-imagem;/*é o grid que vai conter o nome na dv filho pra se usar na clsse pai*/
+       
+}
+section#organizacao-imagem{
+       grid-area: organizacao-imagem;/*é o grid que vai conter o nome na dv filho pra se usar na clsse pai*/
+       
+}
+section#capa-imagem > img, section#organizacao-imagem > img{
+       max-width: 100%;/*colocando uma largura maxima para deixalo responsivo*/
+}
+
+section#organizacao-conteudo{
+       grid-area: organizacao-conteudo;/*é o grid que vai conter o nome na dv filho pra se usar na clsse pai*/
+       
+       display: flex;/* muda o fluxo do elemento para flex */
+       flex-direction: column;/*ele faz com que o fluxo flex se ajeite em colunas impilhando os de cima para baixo
+       utilizado junto com o display flex*/
+       justify-content: center;/*alinha os elementos dentro do div flexivel*/
+       /*nesse caso com tem um botao dentro do elemento ele vai preencher todo os espaçamentos , ai voce tem que ir
+       no elemento boatao e utilizar um align-self = alihar somente o proprio elemento*/
+}
+
+footer{
+    background: lightgray;
+    color: aliceblue;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    text-align: center;/*centralizar o texto*/
+    margin-top: 20px;
+}
+
+
+/* utilizando o flex box , para organizar e estruturar o menu*/
+
+/* eu quero que o conteudo ocupe todo o lugar que esta sobrando*/
+
+nav{/* tag filha para a barra de navegação*/
+   
+
+    flex-grow: 1;/*para fazer com que os espaos do items ocupem os espaços sobando , que ele almenta os itens */
+
+   /* display: flex;*/ /*ele vai pegar cada item que estiver dentro da tag e colocar um do lado do outro*//*transformando ele em container*/
+
+   /* justify-content: center;*/ /* ele cuida do alinhamento dos itens dentro da tag*/
+}
+
+nav ul{/* tag filho dentro de outra  tag filho  */
+
+    display: flex;/*a tag vira container e faz um elemento estar do lado do outro*/
+    list-style: none;/* remove os marcadores da lista  */
+    
+}
+ul a:link, a:visited{/* tag dos links  */
+
+    padding: 10px;/* espaçamento interno  */
+
+    text-decoration: none;/* remover as marcaços do link*/
+
+    color: rgb(92, 88, 83);
+
+    font-size: 1.2rem;
+
+
+}
+
+ul a:hover{/* tag dos links  */
+    color: rgb(6, 82, 245);
+}
+
+a.botao {
+    color:  rgb(6, 82, 245);
+    text-decoration: none;/* remove a marcação do texto */
+    border: 2px solid rgb(6, 82, 245);
+    border-radius: 20px;/* arredondar as bordas  */
+    padding: 5px 20px; /* espaçamento interno */
+    align-self: flex-start;/*alinhando o proprio elementro*/
+}
+
+a.botao:hover {
+   background-color: rgb(5, 70, 250);
+   color: white;
+}
+
+.botao.destaque{
+    background-color: rgb(6, 82, 245);
+    color: white;
+}
+
+.botao.destaque:hover{
+    background-color: rgb(5, 152, 250);
+    color: white;
+}
+
+
+/*tipo grafia  */
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+h3{
+    font-size: 1rem;
+}
+
+.texto-destaque{
+    color: rgb(6, 82, 245);
+}
+
+
+@media (max-width: 768px){
+    .container{/*classe pai container*/
+    
+    grid-template-columns: 1fr;/*fazendo que o grid fique em colunas */
+    /* organizando os conteudos com grid */
+    grid-template-areas:
+      'cabecalho'/*utilizando grid-template-columns voce cria duas colunas , 
+       e voce precisa colocar o nome dos tlamplate areas um d lado do outro para que eles
+       fiquem um do lado do outro no site*/
+      'capa-conteudo'
+      'capa-imagem'
+      'organizacao-conteudo'
+      'organizacao-imagem'
+    ;/*serve para colocar os elementos em areas especificas, nomeando as divs filhos e utilizando na classe pai*/
+    row-gap: 20px;/*define os espaços vereticais entre as linhas dentro do grid*/
+    column-gap: 20px;/*define os espçaos dentro do grid entre oos elmentos eas colunas */
+}
+
+header{/*tag pai que vai dar dimeção a todo o container */
+    margin-top: 20px;
+    flex-direction: column;/*fazendo que eles fiquem em colunas*/
+
+    align-items: center;/*ele ira alinhar no eixo vertical os items */
+    padding: 0 20px;
+ 
+}
+
+
+h1, p,h2, h3 {
+    font-size: 1.5rem;
+}
+
+
+ 
+}
+
+
+/**/

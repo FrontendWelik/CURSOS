@@ -1,0 +1,39 @@
+
+#menu ul{/* classe pai para definir o tamanho do bloco*/
+  list-style-type: none; /* estilo do lista*/
+  padding: 10px; /*espaçamento interno da classe pai */
+  width: 720px; /*tamanho do bloco*/
+  background-color: #24252a;
+  border: 1px solid red;
+}
+#menu ul::after{/*elemento para que o float seja quebrado e os elementos se comportem da maneira correta*/
+ content: ""; /* criando um conteudo fantasma */
+ clear: both; /*aplicando a limpesa da direita e da esquerda */
+ display: table; /* fazendo o display ser tabelado*/
+}
+
+#menu li a{ /* elemento dentro da lista onde esta o link */
+    display: inline; /* definindo o link como inline*/
+    padding: 0.5em 1.5em; /*espaçamento inteerno entre os links  */
+    color:lightblue; /* cor dos links */
+    text-decoration: none; /* decoração dos links */
+    float: left;/*flutuando o elemento*/
+    margin: 10px;/*defindo um espaço entre os elementos (links)*/
+   
+   border-radius: 20px;/*definindo a borda redonda dos links*/
+
+}
+
+#menu li a:hover{
+    background-color: lightblue;
+    color: black;
+    
+}
+
+#menu li a:active{/*ele mostra quando o link foi clicado e */
+    background-color: lightseagreen;  
+}
+
+#menu li.selecionado a{/*isso serve para voce criar uma classe e colocar em cada link de sua pagina para ele marcar qual esta selecioonada*/
+    background-color: lightseagreen;
+}

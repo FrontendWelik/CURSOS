@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            font-size: 20px;
+        }
+
+        div#itens{
+            background-color: orange;
+        }
+        .vermelho{
+            background-color: red;
+        }
+
+        .laranja{
+            background-color: orange;
+        }
+
+        .texto{
+            color: white;
+            padding: 20px 20px;
+        }
+    </style>
+
+    <h1> Atributos Personalizados  </h1>
+
+    <span>Welik carlos</span>
+
+    <button onclick="executar()">clique aqui</button>
+
+    <script>
+
+        function executar(){
+         const obj = document.querySelector('span')
+         const classes = obj.classList   // ele retorna as classes que voce pode utilizar 
+         classes.add('vermelho','texto') // adiciona a classe vermelho
+         //classes.remove('vermelho') // remove a classe vermelho 
+         //classes.toggle('vermelho') // se tiver a classe vermelho ele remove se nao tiver ele adiciona
+
+        }
+
+
+
+       
+
+    </script>
+    
+</body>
+</html>

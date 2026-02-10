@@ -1,0 +1,223 @@
+/*estrutura (leyout)*/
+
+body{ /*o corpo do html */
+    margin: 0;/* dizendo que quero que ele nao tenha nenhuma margem */
+    font-family:Georgia, 'Times New Roman', Times, serif ;/* font que sera utilizada em todo o site */
+}
+
+
+/* começo do cabeçalho */
+
+#cabecalho{/* div pai a cabeca do site*/
+    background-color: lightblue;
+    border-bottom: 1px solid black;/* definindo uma borda de 1px preta no final da classe */
+    position: fixed;/*defindo uma posição fixa do cabeçalho completo*/
+    top: 0;/* defindo que o top seja zero*/
+    left: 0;/* sefinindo que a esquerda seja zero*/
+    right: 0;/* definindo a direita zero*/
+    border: 1px solid red;
+
+}
+
+.container{/*é uma classe a ser reutilizada com parametros formados ele é um tipo de classe pai  */
+  width: 1145px;/*largura do meu container */
+  margin: 0 auto;/* centralizando o container */
+  padding:1.4rem 0;/*espaçamento interno do container */
+
+  border: 1px solid red;
+
+  /* O Logo e sua largura esta defindo em html e*/
+}
+
+ul#menu {/*este menu esta sendo chamado dessa forma por conta do ID que esta dentro da ul a classe PAi da lista */
+  list-style-type: none;/* limpando o estilo do link */
+  margin: 0;/* dando uma margin de zero */
+  padding: 0;/* dando um espaçamento interno de zero*/
+/* esse bloco esta dentro do bloco Pai cabecalho, mais esta fora da imagem da logo */
+  width: 475px;/*largura do bloco menu */
+  float: right;/*fazendo o elemento flutuar nesse caso a direita(com float o elemento quebra e sai do padrao) */
+}
+
+ul#menu li a{/* formatado os links o texto da navbar */
+
+ float: left;/*flutuando os lementos do link, lembrando que o primeiro é oque vai seguir a ordem
+ se voce definir pra flutuar a direita o primeiro bloco quem vai para a direita */
+
+ color: black;/* definindo a cor do texto */
+ text-decoration: none;/*tirando o estilo do ttexto do link */
+ padding: 0.5rem 1rem;/*espacamento interno de cima pra baixo da direita esquerda(ele vai espaçar conforme o conteudo dentro dele ) */
+ font-size: 0.9rem;/*o tamanho da fonte  */
+}
+
+ul#menu li.login a{/* formatado oo  botao de logar dos links  */
+  color: white;/* definindo a cor de texto do botal*/
+  border-radius: 1.2rem;/* definindo a borda do botao*/
+  background-color: black;/*definindo a cor do botao */
+}
+
+ul#menu li a:hover{
+  color: red;
+}
+
+ul#menu li.login a:hover{
+  color: rgb(5, 243, 243);
+}
+
+
+/* fim do cabeçalho*/
+
+/* inicio destaque*/
+
+#destaque{/*elelemnto pai do cabeçalho*/
+    background-color: lightblue;
+    border-bottom: 1px solid black;/* definindo uma borda de 1px preta no final da classe */
+    margin-top: 4.7rem;/* margin da div pai , para ele decer para baixo*/
+    border: 1px solid red;
+
+}
+
+#texto-destaque{/* classe filho do container onde esta localizado o texto de destaque */ 
+  width: 55%;/* a dimeção do tamanho da minha area de texto destaque */
+  border: 1px solid red;
+}
+
+#destaque button{/* esse é o bottao do destaque a baixo do texto span */
+  display: block;/* como ele é um inline isso serve para definilo como bloco e colocalo a baixo */
+  margin-top: 1.5rem;/* defindo uma espaçamento externo da parte de cima para baixo */
+  border-radius: 1.5rem;/* fazendo com que suas bordas fiquem mais arredondadas */
+  border: 1px solid black;/* a borda de 1px solida */
+  padding: 0.8rem 1.5rem;/* espaçamento interno */
+  font-size: 1rem;/* tammanho da font */
+  background-color: white;/* cor de fundo  */
+  cursor: pointer;/* para que quando voce passe o mouse por cima fique com a maozinha  */
+  border: 1px solid red;
+}
+
+/*mais como temos um container de uma forma geral , temos que declarar o container que esta dentro da classe pai que sera
+utilizado a imagem */
+
+.fundo-destaque{
+  background: url(../img/fundo-topo.png) no-repeat right bottom ; /*background url (../img/imagem.png ) = é a imagem que vai ao fundo
+  no-repeat é para que a imagem nao seja repetida , e defindo o local que ela estara */ 
+  background-size: 20rem; /* define o tamanho da imagem */
+  border: 1px solid red;
+}
+
+#tendencias{/*classe ID PAI que vai flutuar os elementos */
+  padding-top: 0.8rem;/*espaçamento interno dos elementos*/
+  border: 1px solid red;
+}
+
+#tendencias::after{/*pseudElemento que serve para limpar o fluxo do elemento pai referente aos elementos que vem depois*/
+  content: "";/*conteudo fantasma*/
+  display: table;/*falando que o display dele e tabela*/
+  clear: both;/*fazendo que ele limpe os elementos*/
+
+}
+
+.item-tendecia{/*a div que contrem os itens */
+  width: 26%;/*a largura dessa div*/
+  padding-left: 7%;/*o espaçamento interno dessa div */
+  margin-bottom: 2rem;/* margin baixo dessa div */
+  border: 1px solid red;
+  position: relative;/*neste caso a posiçao relativa esta definida para que a posição filho se encaixe no seu lugar, da posiçao
+  da classe filho que é a do numero a baixo dessa*/
+  
+  /*se a classe pai nao foi definida ela podera se baser nao na classe pai mais na classe de maior superioridade da tela , ja que 
+  ela pode ter uma posição definida como absoluta tbm , atente-se nisso*/
+
+  /*depois que voce aplicar imagen e copiar os itens ele ira ficar em modo bloco , para resolver isso voce vem na classe pai
+  usa o float para tirar desse modo padrao*/
+  float: left;
+
+  /*esse float left esta tirando o fluxo comun dos blocos que vem derpois dela  é preciso utilizar clear= limpar para poder 
+  fazer o fluxo voltar ao normal dentro da classe pai . nesse cado a classe #tendencias*/ 
+
+
+}
+.numero{/*elelemnto span formato para que ele assuma outra posiçao dentro do mesmo bloco*/
+  font-size: 3rem;/* tamanho da fonte*/
+  font-weight: bold;/*estilo da fonte*/
+  color: lightgrey;
+  border: 1px solid red;
+  position:absolute;/*definindo uma posição absoluta para o  numero referente aos outros elementos*/
+  /*ATENÇÃO: quando voce utiliza a position absolt, ele ira alinhar de acrodo com a classe pai do elementos nesse caso e a div pai
+  item dedencia , ai voce precisa definir uma posição para a classe pai */
+  top: 0;/*disendo ao elemento que ele deve ficar com o top zero */
+  left: 0;/*e a esquerda dele é zero*/
+
+}
+
+.rodape{/*esse é a classe do rodape */
+    background-color: lightblue;
+    border-top: 1px solid black;/* definindo uma borda de 1px preta no começo da classe */
+    border: 1px solid red;
+}
+
+/* */
+
+
+
+
+/* Tipografia (textos) */
+
+h1{/* esse é o texto da primeira parte que esta dentro de texto distaque */
+  font-size: 4rem;/* tamanho da fonte */
+  font-weight: 100px;/* define se a fonte sera com traços mais finos ou grossos*/
+   margin: 0;/* a margem  o espaçamento externo entre os elementos */
+  letter-spacing: -0.1rem;/* para ajustar a quantidade de espaços em branco entre os caracteres*/
+
+}
+
+h2{/* titulo de tendencias */
+  font-size: 0.8rem;/* tamanho da fonte*/
+  text-transform: uppercase;/*estilo da fonte no caso deixando ela com letra maiuscula */
+
+}
+
+.titulo-tendencia{/* essa é a classe dentro do H2 que vai conter a imagem*/
+  background: url(../img/icone-tendencia.png) no-repeat left ;
+  padding: 0.2rem 0 0.2rem 2rem;/*espaçamento interno sobre o titulo e a imagem */
+  background-size: contain;/*alem de definir o tamnho ela define tambem sobre a àrea de proporção que a imagem pode cobrir 
+  cover: cobrir toda a area da imagem e contain para caiba corretamente sobre a área disponivel*/
+}
+
+/*criando uma classe para que apenas os Titulos selecionados possam ter a imagem de fundo que eu quiser colocar */
+
+h3, h4{/*pegando os dois elementos e dando uma margin pra eles */
+  margin: 0.2rem;
+}
+
+h4{/*pegando um elemento e dando a ele outro estilo de fonte(çetras maiusculs minusculas , sublinhados etc...) */
+  font-weight: 100;
+}
+
+.icone1{/*colocando icones atras do titulo do texto*/
+  background: url(../img/icone1.png) no-repeat left / contain;
+  padding-left: 1.5rem;
+}
+
+.icone2{/*colocando icones atras do titulo do texto*/
+  background: url(../img/icone2.png) no-repeat left / contain;
+  padding-left: 1.5rem;
+}
+
+.icone3{/*colocando icones atras do titulo do texto*/
+  background: url(../img/icone3.png) no-repeat left / contain;
+  padding-left: 1.5rem;
+}
+
+.icone4{/*colocando icones atras do titulo do texto*/
+  background: url(../img/icone4.png) no-repeat left / contain;
+  padding-left: 1.5rem;
+}
+
+.icone5{/*colocando icones atras do titulo do texto*/
+  background: url(../img/icone5.png) no-repeat left / contain;
+  padding-left: 1.5rem;
+}
+
+.icone6{/*colocando icones atras do titulo do texto*/
+  background: url(../img/icone6.png) no-repeat left / contain;
+  padding-left: 1.5rem;
+}

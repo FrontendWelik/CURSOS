@@ -1,0 +1,75 @@
+/*ao definir o header como flex, voce o coloca como um container , e as outras tags sao items , e comandos como justify-content nao vao funcionar 
+para isso voce vai ter que declarar que os itens tambem virem container com o display: flex*/
+
+header{/*tag pai que vai dar dimeção a todo o container */
+    display: flex;/*ele vai pegar cada item que estiver dentro da tag e colocar um do lado do outro*/
+
+    align-items: center;/*ele ira alinhar no eixo vertical os items */
+
+    border: 1px solid red;
+
+    padding: 0 10px ;/* espaçanto interno*/
+
+
+}
+
+/* utilizando o flex box , para organizar e estruturar o menu*/
+
+/* eu quero que o conteudo ocupe todo o lugar que esta sobrando*/
+
+nav{/* tag filha para a barra de navegação*/
+    border: 1px solid red;
+
+    flex-grow: 1;/*para fazer com que os espaos do items ocupem os espaços sobando , que ele almenta os itens */
+
+   /* display: flex;*/ /*ele vai pegar cada item que estiver dentro da tag e colocar um do lado do outro*//*transformando ele em container*/
+
+   /* justify-content: center;*/ /* ele cuida do alinhamento dos itens dentro da tag*/
+}
+
+nav ul{/* tag filho dentro de outra  tag filho  */
+
+    display: flex;/*a tag vira container e faz um elemento estar do lado do outro*/
+    list-style: none;/* remove os marcadores da lista  */
+    
+}
+ul a:link, a:visited{/* tag dos links  */
+
+    padding: 10px;/* espaçamento interno  */
+
+    text-decoration: none;/* remover as marcaços do link*/
+
+    color: rgb(92, 88, 83);
+
+
+}
+
+ul a:hover{/* tag dos links  */
+    color: rgb(6, 82, 245);
+}
+
+a.botao {
+    color:  rgb(6, 82, 245);
+    text-decoration: none;/* remove a marcação do texto */
+    border: 2px solid rgb(6, 82, 245);
+    border-radius: 20px;/* arredondar as bordas  */
+    padding: 5px 20px; /* espaçamento interno */
+}
+
+a.botao:hover {
+   background-color: rgb(5, 234, 250);
+   color: black;
+}
+
+.botao.destaque{
+    background-color: rgb(6, 82, 245);
+    color: white;
+}
+
+.botao.destaque:hover{
+    background-color: rgb(5, 234, 250);
+    color: black;
+}
+
+
+/* */

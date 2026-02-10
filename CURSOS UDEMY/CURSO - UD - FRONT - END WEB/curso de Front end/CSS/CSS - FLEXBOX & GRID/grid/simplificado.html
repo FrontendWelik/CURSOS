@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+
+    <style>
+        body{
+            font-size: 3rem; /*almenta o tamnho da fonte  */
+
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 20px;/*espaçamento interno do container e externo na div*/
+        }
+
+        .grid{/* a classe pai */
+         
+            display: grid; /* transforma os elemento conatainer em elemento de grade, permitindo organizarr os seus 
+            elementos filhos em linhas e colunas */
+
+            grid-template-columns:  1fr  1fr  1fr ;/* definir quantas colunas voce quer dentro do grid */
+            /* voce pode utilizar porcentagem % ou pixels PX , repeat(4, 20%)  */
+            row-gap: 20px;/*ele fara um espaço entre as linhas da coluna do grid na horizontal */
+            column-gap: 20px;/*espaço na vertical */
+    
+
+        }
+
+        .item1{/*classe filho dentro da div*/
+            grid-column: 1;/*ele utiliza o grid-column-start/end em seu valores , para definir como vai 
+            se portar o item dentro da coluna */
+            grid-row: 1;/*a mesma coisa que o column mais focado nas linhas da tabela*/
+            
+
+        }
+
+        .item2{ /* classe filho*/
+            grid-column: span 2;/* ele vai ocupar os espaços apartir do coluna 2  */
+        }
+
+        .item3{ /* classe filho*/
+            grid-column: span 2;/* ele vai ocupar os espaços apartir do coluna 2  */
+        }
+
+        .item4{ /* classe filho*/
+            grid-row: span 2;/* ele vai ocupar os espaços apartir do linha 2  */
+        }
+
+        .item7{ /* classe filho*/
+            grid-column: span 3;/* ele vai ocupar os espaços apartir do linha 2  */
+        }
+
+        .grid > div{ /*pegando a classe pai e chamando a filhos divs dentro da classe  */
+
+            border: 5px solid red;
+
+
+        }
+
+        /* */
+    </style>
+</head>
+<body>
+
+    <h1> trabalhando com colunas no Grid </h1>
+
+    <div class="grid"><!-- container grid -->
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+
+    </div><!-- container grid -->
+
+    <!--  -->
+    
+</body>
+</html>

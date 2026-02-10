@@ -1,0 +1,10 @@
+.Header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: aqua;
+}
+
+.headerMenu a{
+    margin-right: 50px;
+}

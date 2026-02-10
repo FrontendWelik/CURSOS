@@ -1,0 +1,46 @@
+body{
+    background-color:  white;
+    margin: 0; /*para zerar a margim do site  */
+    padding: 0;/*para zerar o padding do site */
+}
+
+#container{/*uma forma de deixar um nav bar centralizado em com tamanho definido*/
+    width: 700px;/*essa é a caixa principal */
+    background-color: rgb(241, 205, 205);/* a cor da caixa  */
+    margin: 1em auto;/* defindo a margem que vai centralizar a div */
+    padding: 0.8em;/*o espaçamento dentro da div  */
+    position: relative;/* uma posição relativa do conainer*/
+}
+
+#menu{
+    background-color: lightskyblue;
+    padding: 1em;/*o espaçamento dentro da div menu */
+}
+
+a{
+    padding: 0.5em;/*espaço entre os links*/
+    text-decoration: none;/* para tirar a marcação dos links */
+    color: white;
+}
+
+a:hover{
+    background-color: white;
+    color: black;
+}
+
+/*na imagem da classe novo definir como absoluta em relação ao container */
+.novo{
+    position: absolute;
+    top: 0; /* defindo em que lugar do alto da pagina ele se encontra */
+    right: 0; /* defindo em que lugar do lado direito ele se encontra */
+}
+
+.chat {
+    background-color: blueviolet;
+    width: 150px; /*defindo o tamanho do quadrado de um lado ao outro*/
+    height: 200px; /* defindo o tamnho de cima a baixo*/
+    padding: 0.5em; /*  definindo o tamnho interno*/
+    position: fixed;/*posição fixa */
+    bottom: 0;/*de baixo pra cima da div*/
+    left: 0;/*pro lado esquendo da div*/
+}

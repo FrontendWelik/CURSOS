@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando elementos</title>
+</head>
+<style>
+    
+
+</style>
+<body>
+
+    <!-- 
+    Selecionar multiplos elementos com :
+    getElementsByClassName() - retorna uma HTMLColection = uma seleção de elementos 
+    getElementsByTagName() - retorna uma HTMLColection = uma seleção de elementos
+    getElementsByName() - retorna uma nodelist = uma seleção de elementos
+    querySectorAll() - retorna uma nodelist = uma seleção de elementos
+
+    Eles selecionam Multiplos elementos 
+
+    -->
+
+    <div div="destaque">Area de conteudo</div>
+    <h1 class="vermelho">Titulo do site</h1>
+    <p>Sub titulo</p>
+
+
+
+    <div>Area de conteudo 2 </div>
+    <ul>
+        <li class="primeiro">item 1 </li>
+        <li>item 2 </li>
+    </ul>
+
+
+    <ul>
+        <li class="primeiro">item 1 </li>
+        <li>item 2 </li>
+    </ul>
+    <input type="text" name="nome">
+    <input type="text" name="nome">
+
+    <button onclick="executar()">botao</button>
+   
+
+    
+
+    <script>
+
+         const colecao = document.getElementsByTagName("")// ele retorna uma lista de itens 
+         // e para exibir pode ser utilizado tal maneira 
+
+         
+         for(let i = 0; i < colecao.length; i++){// nesse a condição do for é se i for menor que obj.length(contador
+            // ele vai colocar um backgrou nos elementos dentro de li)
+            colecao[i].style.backgroundColor = ""
+
+         }
+           
+         //mudando o HTMLColetion para um array e acessar ele como um array e utilizar o for each
+         const lista = Array.from(colecao)
+         const funcao = function(item, i){
+            console.log(item)
+          }
+         lista.forEach(funcao)
+
+        
+           const obj = document.getElementsByClassName("vermelho")// selecionando o elemento pelo nome da classe 
+
+           const obj2 = document.getElementsByName("nome")//capturar o elemento pelo nome , geralmete utilizado para capturar nome do formulario input
+
+           function executar(){
+            const obj3 = document.querySelectorAll("li.primeiro").style.backgroundColor = "yellow"
+           }
+            
+
+
+
+    
+       
+    </script>
+
+
+
+    
+</body>
+</html>

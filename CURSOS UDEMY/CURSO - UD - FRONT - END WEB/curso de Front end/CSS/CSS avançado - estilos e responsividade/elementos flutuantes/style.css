@@ -1,0 +1,26 @@
+/*
+p{
+    border: 1px solid red;
+}
+
+img{
+    border: 1px solid blue;
+    float: left;em position ele fica acima do elemento , com float ele coloca o elemento a cima mais
+    os outros elementos fluem ao si redor  nao ocupando o mesmo espaço 
+    background-color: lightsalmon;
+}
+*/
+body{
+    border: 1px solid red;
+}
+
+.caixa{/*quando for usar elementos flutuantes voce precisa definir uma largura e altura para o elemento*/
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 0.3em;/*espaçament entre os elementos ja que todos sao da mesma classe */
+    float:left ;/*deixar um do lado do outro em linha inline e diferente que lef ou right*/
+    
+
+}

@@ -1,0 +1,20 @@
+
+
+#principal{/* classe pai*/
+    border: 1px solid red;/* cor da borda*/
+    background-color: lightblue;/*cor de fundo da classe pai*/
+    width: 920px;/* largura da classe pai */
+    margin: 0 auto;/* uma forma de voce centralizar o conteudo*/
+
+    /* a classe pai vai espandir de acordo com os item dentro dele, 
+    mais utilizando float ele sai do fluxo normal  */
+}
+
+.noticia{/* classe filho */
+    background-color: antiquewhite;/*cor de fundo da classe filho */
+    padding: 5px;/* espaçamento interno da classe filho */
+    width: 280px;/*largura da classe filho */
+    margin: 7px;/* margin da calsse filho referente a classe pai */
+    float: left;
+}
+

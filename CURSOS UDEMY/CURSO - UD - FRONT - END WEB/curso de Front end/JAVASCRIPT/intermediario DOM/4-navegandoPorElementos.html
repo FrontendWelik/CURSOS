@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div#itens{
+            background-color: lightcoral;
+        }
+
+    </style>
+    <div>Irmao anterior</div>
+    <div id="pai">
+        <div id="itens"> 
+        <p> 1 elemento</p>
+        <p> 2 elemento</p>
+        <p> 3 elemento</p>
+        <p> 4 elemento</p>
+        </div>
+    </div>
+    <div>proximo irmao</div>
+    
+
+    <script>
+
+const lista = document.querySecloctor("div#itens")
+console.log(lista.parentNode)//ele pega o elemento pai do itens
+//firstChild - primeiro filho
+//lastChild - ultimo filho
+
+
+    </script>
+</body>
+</html>

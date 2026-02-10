@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando elementos</title>
+</head>
+<style>
+    li.primeiro{
+      background-color: black;
+    }
+    .destaque{
+        color: red;
+    }
+
+</style>
+<body>
+
+    <!-- 
+    selecionar o elemento pelo id = getElementById()
+    selecionar o elemento pela querySelector(#elemento) - ele usa o celetor css 
+    -->
+
+    <div id="destaque">Area de conteudo</div>
+    <h1 class="vermelho">Titulo do site </h1>
+    <p>Subtitulo</p>
+
+    <ul>
+        <li class="primeiro">item 1</li>
+        <li>item2</li>
+    </ul>
+
+    <button onclick="executar()">click aqui </button>
+
+    <script>
+       const obj = document.getElementById("").style.backgroundColor = "yellow"
+
+       const obj2 = document.querySelector("").style.color = "white" // utilizando o seletor css 
+
+
+       /*exercicio rapido , que quando eu clicar no botao ele mudara o conteudo da lista no item 1 
+       como eu fiz*/
+       function executar(){
+        const obj3 = document.querySelector('li.primeiro').innerHTML = "mudou o conteudo"
+       }
+       
+
+       /*como o professor fez*/
+
+       function executar(){//o elemento de onclick
+
+        const mudarLi = document.querySelector('li.primeiro')//selecionar o elemento
+        mudarLi.innerHTML = "modou da forma do professor"
+        mudarLi.classList.add('destaque')//adiciona a classe destaque , estou colocando mais uma classe dentro da classe ja existente  
+       }
+    </script>
+
+
+
+    
+</body>
+</html>

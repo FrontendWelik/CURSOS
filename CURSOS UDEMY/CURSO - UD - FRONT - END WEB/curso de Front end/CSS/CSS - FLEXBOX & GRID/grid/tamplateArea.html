@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+
+    <style>
+        body{
+            font-size: 1.2rem; /*almenta o tamnho da fonte  */
+
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 20px;/*espaçamento interno do container e externo na div*/
+        }
+
+        .grid{/* a classe pai */
+
+            border: 5px solid red;
+         
+            display: grid; /* transforma os elemento conatainer em elemento de grade, permitindo organizarr os seus 
+            elementos filhos em linhas e colunas */
+
+            /* voce pode utilizar porcentagem % ou pixels PX , repeat(4, 20%)  */
+            row-gap: 20px;/*ele fara um espaço entre as linhas da coluna do grid na horizontal */
+            column-gap: 20px;/*espaço na vertical */
+
+            grid-template-columns: 1fr 1fr; /*define o numero de colunas e a largura de cada uma dentro do grid*/
+            
+            grid-template-areas:
+            /* voce pode mesclar as colunas */
+              'navegacao cabecalho'
+              'navegacao principal'
+              'navegacao rodape'
+        
+            ;
+        }/*com esse elemento voce define onde vai estar cada grid area que voce nomeou*/
+
+       
+
+        header, nav, main, footer { /*tags dentro da classe pai */
+
+            border: 5px solid red;
+
+        }
+        /*isso serve para voce dar nomes a essas areas e utiliza-las dentro do GRID*/
+        header{grid-area: cabecalho;}
+        nav{grid-area: navegacao;}
+        main{grid-area: principal;}
+        footer{grid-area: rodape;}
+
+
+        @media (min-width: 300px){
+
+            .grid{/* a classe pai */
+
+            grid-template-columns: 1fr; /*define o numero de colunas e a largura de cada uma dentro do grid*/
+            grid-template-areas:
+            /* voce pode mesclar as colunas */
+              'cabecalho'
+              'navegacao'
+              'principal'
+              'rodape '
+        
+            ;
+        }
+    }
+
+
+        @media (min-width: 1200px){
+
+            .grid{/* a classe pai */
+
+            grid-template-columns: 1fr 1fr; /*define o numero de colunas e a largura de cada uma dentro do grid*/
+            grid-template-areas:
+            /* voce pode mesclar as colunas */
+              'cabecalho cabecalho'
+              'navegacao principal'
+              'navegacao rodape'
+        
+            ;
+        }
+
+        }
+
+        /* */
+    </style>
+</head>
+<body>
+
+    <h1> Tamplate de como é um site em GRID  </h1>
+
+    <div class="grid"><!-- container grid -->
+   
+        <header>Cabeçalho de site</header>
+        <nav>Home | produtos | login | Cadastro</nav>
+        <main>
+            <h2>Conteudo do sitemas</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Soluta, voluptatum incidunt assumenda nulla aliquid ipsum illo, 
+                laudantium commodi, quis aut sint vitae? Distinctio accusamus aut 
+                impedit dolore quis numquam laudantium?
+            </p>
+        </main>
+
+        <footer>rodape</footer>
+
+    </div><!-- container grid -->
+
+    <!--  -->
+    
+</body>
+</html>

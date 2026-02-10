@@ -1,0 +1,83 @@
+<html>
+<body>
+    <head>
+        <style>
+            
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            header{
+                background-color: rgb(83, 82, 82);
+                text-align: center;
+                color: azure;
+                padding: 20px 0;
+            }
+
+            .lista-cadastro{
+                display: flex;
+                margin:20px 0;
+                padding: 0 20px;
+            }
+
+            .lista-cadastro input[type=text]{
+                flex: 1;
+                height: 40px;
+                padding-left: 20px;
+            }
+
+            .lista-single{
+                padding: 10px 0;
+                margin: 20px 0;
+                border-bottom: 1px solid #ccc;
+                display: flex;
+            }
+
+            .lista-single h3{
+                flex: 1;
+                padding:0 20px;
+            }
+
+            h3.price-produto{
+                text-align: right;
+            }
+
+            h3.price-produto > span{
+                background-color:  rgb(59, 133, 202);
+                padding: 8px 10px;
+                border-radius: 20px;
+                color: white;
+            }
+
+            .soma{
+                margin: 20px;
+            }
+
+        </style>
+    </head>
+    <header>
+        <h2>App lista de supermercado</h2>
+    </header>
+    <div class="lista-cadastro">
+        <input type="text" placeholder="nome do produto" name="nome_produto">
+        <input type="number" name="price" step="0.01">
+        <input type="submit" name="acao" value="cadastrar">
+
+    </div>
+
+    <div class="lista-produtos">
+      
+
+    </div>
+
+    <div class="soma">
+        <h1>Total: R$0</h1>
+    </div>
+
+    <button name="limpar">limpar</button>
+
+    <script src="supermercado.js"> </script>
+</body>
+</html>

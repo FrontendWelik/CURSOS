@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+/* media queries */
+
+.box{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(15, 82, 82);
+}
+
+@media screen and (max-width: 768px){
+    .box{
+        width: 100%;
+    }
+}

@@ -1,0 +1,73 @@
+/* voce so consegue utilizar o Z-index com position:absolute - relative e fixed */
+
+.caixa1{
+    border: 1px solid rgb(18, 18, 19);
+    background-color: rgb(8, 185, 245);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;/*ele fara que o elemento fique a cima da caixa 2 */
+}
+/* no HTML o  elemento de baixo sempre fica acima por padrão, se voce definir uma position: relative na 
+de cima ela ficara a cima da de baixo */
+
+.caixa2{
+    border: 1px solid black;
+    background-color: lightcoral;
+    width: 100px;
+    height: 100px;
+    top: 80px;
+    left: 80px;
+    position: absolute;
+    z-index: 1;/*elemento 0 ficara abaixo da caixa 1 */
+}
+
+.caixa3{
+    border: 1px solid black;
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    top: 150px;
+    left: 150px;
+    position: absolute;
+    z-index: 0;
+}
+
+
+/*Exercicio*/
+
+.caixa{/*primeira div que abriga todas as outras divs dentro de si */
+    background-color: purple;/*cor de fundo*/
+    position: relative;/*posição relativa do elemento*/
+    width: 700px;/*tamanho do elemento da esquerda pra direita, mas sobre o tamnho do que esta dentro dela*/
+    /*definindo um width com px ele se torna um tamanho fixo e em % ele fica responsivo,
+      dentro da caixa Pai ele faz os elementos filhos serem responsivos */
+}
+
+.destaque{/*segunda div dentro da primeira div */
+    position: absolute;/*a posição absoluta referente a outras divs*/
+    bottom: 2.5em;/*posição de baixo pra cima , para ele ficar a cima do elemento*/
+    left: 2em;/*da esquerda pra direita */
+    background-color: orange;
+    color: white;/*cor dentro do elemento*/
+    padding: 10px 16px;/*espaçamento interno paddin:cima baixo, esquerda direita*/
+    border-radius: 30px;/*definir que a borda seja mais redonda e menos quadrada*/
+
+}
+
+.promo{
+    background-color: white;/* */
+    border: 2px dotted purple;/* cor da borda e tipo da borda */
+    color: purple;
+    position: absolute;/* posição absoluta sobre todos os outro elementos*/
+    bottom: -1.8em;/*posição de baixo pra cima no valor negativo pra deixalo pra baixo e sair um pouco da caixa que ele pertence */
+    padding: 1em;/* espaça,mento interno de cima baixo direita esquerda */
+    left: 10%;/* posição da esquerda pra direita */
+    right: 10%;/* posição da direita pra esquerda*/
+    text-align: center;/* alinhar o texto no centro do elemento */
+    border-bottom-left-radius: 20px;/* definir uma borda mais redonda na esquerda de baixo */
+    border-bottom-right-radius: 20px;/* definir uma borda mais redonda na direita de baixo*/
+
+}

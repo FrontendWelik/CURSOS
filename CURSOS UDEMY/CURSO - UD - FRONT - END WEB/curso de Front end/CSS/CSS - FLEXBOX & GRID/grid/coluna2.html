@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID</title>
+
+    <style>
+        body{
+            font-size: 3rem; /*almenta o tamnho da fonte  */
+
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 20px;/*espaçamento interno do container e externo na div*/
+        }
+
+        .grid{/* a classe pai */
+         
+            display: grid; /* transforma os elemento conatainer em elemento de grade, permitindo organizarr os seus 
+            elementos filhos em linhas e colunas */
+
+            grid-template-columns: 200px 200px 200px;/* definir quantas colunas voce quer dentro do grid */
+            /* voce pode utilizar porcentagem % ou pixels PX , repeat(4, 20%)  */
+            row-gap: 20px;/*ele fara um espaço entre as linhas da coluna do grid na horizontal */
+            column-gap: 20px;/*espaço na vertical */
+    
+
+        }
+
+        .item1{/*classe filho dentro da div*/
+            grid-column-start: 1;/*esta chamando a coluna do grid no caso o inicio dela*/
+            grid-column-end: 3;/*esta chamando a coluna do grid no caso o no final dela*/
+            /*isso faz com que o elemento item1 fique maior e ocupe o espaço que seria do item 2*/
+
+            /*ele pega o inicio da linha e mescla com o final da linha , row = linha infileirado*/
+            grid-row-start: 1;/*ele faz a mesma coisa que o elemento acima , so que nao nas colunas mais nas linhas */
+            grid-row-end: 3;
+
+        }
+
+        .grid > div{ /*pegando a classe pai e chamando a filhos divs dentro da classe  */
+
+            border: 5px solid red;
+
+
+        }
+
+        /* */
+    </style>
+</head>
+<body>
+
+    <h1> trabalhando com colunas no Grid </h1>
+
+    <div class="grid"><!-- container grid -->
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+        <div class="item10">10</div>
+        <div class="item11">11</div>
+        <div class="item12">12</div>
+
+    </div><!-- container grid -->
+
+    <!--  -->
+    
+</body>
+</html>

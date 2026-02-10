@@ -1,0 +1,39 @@
+.caixa2{
+    width:600px ;/*a dimensão da caixa, esquerda direita*/
+    height: 300px;/*a dimensão de cima baixo*/
+    border: 1px solid red;/*defindo uma borda de 1 px solido e a cor da borda*/
+    /* se eu nao definir uma dimensão ela por padrao ela ocupa todo espaço disponivel 
+    para que o conteudo seja todo exibido */
+    background-color: lightgray;
+}
+
+/* definindo um tamnho com pixels ela ira permanecer no tamanho definido*/
+/*outra propriedade que define uma dimensão minima min-width*/
+
+.caixa1{
+    min-width: 300px;/*largura minima*/
+    max-width:600px ;/*maximo de largura*/
+    height:300px ;
+    border: 1px solid red;
+    background-color: azure;
+}
+
+/*o min-height ele define uma altura minima dentro do elemento do seu conteudo*/
+
+
+.caixa0{
+    width: 600px;
+    height: 300px;
+    border: 1px solid red;
+    background-color: rgb(61, 184, 184);
+    /* visible:exibe o conteudo de forma vazada
+       fora da caixa de conteudo
+
+       Hidden: Esconde o conteudo excente
+
+       Scroll: Sempre exibe barras de rolagem
+
+       Auto: adiciona scroll somente necessario
+    */
+    overflow: auto;/*utila-se quando o conteudo esta a sair da caixa div */
+}

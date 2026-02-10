@@ -1,0 +1,55 @@
+body{
+    background-color: black;
+    font-size:15px ;
+    color: white;
+}
+h2{
+font-size: 40px;
+color: rgb(250, 213, 5);
+}
+
+.container-flex{
+  height: 180px;
+  border: 4px solid lightblue;
+  display: flex;/* define que o elemento saia de bloco e seja flexivel e fique em line */
+  flex-direction:row;/*direcionou o elemento pra ficar da lado do outro */
+  justify-content: center;/* defindo um espaço entre as divs , com igualdade*/
+  align-items: center;/* alinha as divs conforme seu fluxo que começa de cima pra baixo */
+  overflow: auto;/*mascara o elemento dentro dele */
+
+}
+
+.container-flex > div{
+    color: white;
+    padding: 4px;/* espaçamento interno */
+    margin: 4px;/* margem dos elementos  */
+    border: 4px solid rgb(171, 1, 250);
+}
+
+.textog{
+ font-size: 3rem;
+}
+
+
+
+.container-flex2{
+  height: 180px;
+  border: 4px solid rgb(5, 243, 144);
+  display: flex;/* define que o elemento saia de bloco e seja flexivel e fique em line */
+  flex-direction:column;/*direcionou o elemento pra ficar um abaixo do outro*/
+  justify-content: center;/* defindo um espaço entre as divs , com igualdade*/
+  align-items: center;/* alinha as divs conforme seu fluxo que começa de cima pra baixo */
+
+}
+
+.container-flex2 > div{
+    color: white;
+    padding: 4px;/* espaçamento interno */
+    margin: 4px;/* margem dos elementos  */
+    border: 4px solid rgb(247, 5, 5);
+}
+
+.textog{
+ font-size: 3rem;
+}
+/* */

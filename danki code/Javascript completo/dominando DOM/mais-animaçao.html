@@ -1,0 +1,126 @@
+<html>
+<body>
+    <style>
+
+        .conteudo h2 span{
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+         /* ocutar texto*/
+        .conteudo p{
+            overflow: hidden;
+            height:0;
+            transition: 1s;
+        }
+        .mostrar{
+            height: 200px !important;
+        }
+     
+    </style>
+
+    <div class="conteudo">
+        <h2>titulo do conteudo <span>ver mais !</span> </h2>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis error odio, 
+            illum a repellat maiores cum deserunt reprehenderit illo molestias maxime quos 
+            eligendi. Ratione obcaecati ullam perferendis, illo asperiores voluptatem.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis error odio, 
+            illum a repellat maiores cum deserunt reprehenderit illo molestias maxime quos 
+            eligendi. Ratione obcaecati ullam perferendis, illo asperiores voluptatem.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis error odio, 
+            illum a repellat maiores cum deserunt reprehenderit illo molestias maxime quos 
+            eligendi. Ratione obcaecati ullam perferendis, illo asperiores voluptatem.
+        </p>
+    </div>
+
+    <div class="conteudo">
+        <h2>titulo do conteudo <span>ver mais !</span> </h2>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis error odio, 
+            illum a repellat maiores cum deserunt reprehenderit illo molestias maxime quos 
+            eligendi. Ratione obcaecati ullam perferendis, illo asperiores voluptatem.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis error odio, 
+            illum a repellat maiores cum deserunt reprehenderit illo molestias maxime quos 
+            eligendi. Ratione obcaecati ullam perferendis, illo asperiores voluptatem.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis error odio, 
+            illum a repellat maiores cum deserunt reprehenderit illo molestias maxime quos 
+            eligendi. Ratione obcaecati ullam perferendis, illo asperiores voluptatem.
+        </p>
+    </div>
+
+    <div class="conteudo">
+        <h2>titulo do conteudo <span>ver mais !</span> </h2>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis error odio, 
+            illum a repellat maiores cum deserunt reprehenderit illo molestias maxime quos 
+            eligendi. Ratione obcaecati ullam perferendis, illo asperiores voluptatem.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis error odio, 
+            illum a repellat maiores cum deserunt reprehenderit illo molestias maxime quos 
+            eligendi. Ratione obcaecati ullam perferendis, illo asperiores voluptatem.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis error odio, 
+            illum a repellat maiores cum deserunt reprehenderit illo molestias maxime quos 
+            eligendi. Ratione obcaecati ullam perferendis, illo asperiores voluptatem.
+        </p>
+    </div>
+    <div class="conteudo">
+        <h2>titulo do conteudo <span>ver mais !</span> </h2>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis error odio, 
+            illum a repellat maiores cum deserunt reprehenderit illo molestias maxime quos 
+            eligendi. Ratione obcaecati ullam perferendis, illo asperiores voluptatem.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis error odio, 
+            illum a repellat maiores cum deserunt reprehenderit illo molestias maxime quos 
+            eligendi. Ratione obcaecati ullam perferendis, illo asperiores voluptatem.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis error odio, 
+            illum a repellat maiores cum deserunt reprehenderit illo molestias maxime quos 
+            eligendi. Ratione obcaecati ullam perferendis, illo asperiores voluptatem.
+        </p>
+    </div>
+    
+
+    
+
+    <script> 
+/*
+          var span = document.querySelector('.conteudo span');
+
+          span.addEventListener('click',()=>{
+          var conteudo = document.querySelector('.conteudo p');
+
+          if(conteudo.classList.contains('mostrar')){
+            span.innerHTML = 'ver mais!';
+            conteudo.classList.remove('mostrar');
+          }else{
+            span.innerHTML = 'ver menos!';
+            conteudo.classList.add('mostrar');
+            
+          }
+    });
+  */
+//colocar em mais de um elemento
+
+    // Seleciona todos os elementos  que estão dentro de um elemento com a classe 'conteudo'
+   var spans = document.querySelectorAll('.conteudo span');
+
+   // Para cada  encontrado, adiciona um evento de clique
+  spans.forEach(function(span) {
+    span.addEventListener('click', function() {
+        // Busca o próximo elemento irmão do elemento pai do  clicado
+        var conteudo = this.parentElement.nextElementSibling;
+        
+        // Verifica se o próximo elemento já tem a classe 'mostrar'
+        if (conteudo.classList.contains('mostrar')) {
+            // Se tiver, altera o texto do  para 'Ver mais!' e remove a classe 'mostrar'
+            this.innerHTML = 'Ver mais!';
+            conteudo.classList.remove('mostrar');
+        } else {
+            // Se não tiver, altera o texto do  para 'Ocultar' e adiciona a classe 'mostrar'
+            this.innerHTML = 'Ocultar';
+            conteudo.classList.add('mostrar');
+        }
+    });
+});
+    </script>
+</body>
+</html>

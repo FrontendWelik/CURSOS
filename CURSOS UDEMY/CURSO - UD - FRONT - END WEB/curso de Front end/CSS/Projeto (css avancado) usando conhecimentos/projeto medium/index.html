@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Medium onde boas ideias encontram voce </title>
+</head>
+<body>
+
+    <div id="cabecalho"><!-- cabecalho ele esta com as cores do elemento-->
+        <div class="container"><!-- ele esta dando o espaço dos elementos-->
+        <img src="img/logo.svg" alt="Logo Medium" width="160" ><!-- ele carrega a imagem da logo-->
+        <ul id="menu"><!-- ele carrega o elemento Pai do menu-->
+            <!-- para fazer flutuar de uma forma organizada flutue o elemento pai UL para a direita
+             e depois dentro dele flue os elementos filho para a esquerda-->
+            <li><a href="#">Nossa Historia</a></li><!-- minha lista da navbar-->
+            <li><a href="#">Membros</a></li>
+            <li><a href="#">Escrever</a></li>
+            <li class="login"><a href="#">Logar</a></li>
+
+        </ul><!-- menu-->
+
+        </div><!-- container-->
+
+    </div><!-- cabecalho-->
+
+    <!-- fim do cabeçalho -->
+
+    <!-- area de destaque-->
+
+    <div id="destaque"><!-- inicio destaque , a classe pai do container -->
+     <div class="container fundo-destaque"><!-- container o container que segue o padrao de cima  -->
+        <!--
+         para colocar a imagem e ela fica boa seria da melhor forma ela estar dentro do container ,
+         mais como temos um container de uma forma geral , temos que declarar o container que esta dentro da classe pai que sera
+         utilizado a imagem
+         -->
+       <div id="texto-destaque"><!--texto-destaque - essa div vai ter uma largura fixa para conter o texto principal dentro dela  -->
+        <h1>Medium é um lugar para escever, ler e conectar</h1><!-- texto do conteudo destaque -->
+        <span><!-- texto que vai ficar a baixp do texto principal  -->
+            É facil e gratis postar suas ideias
+            sobre qualquer tópico e se conectar
+            com milhoões de leitores 
+        </span>
+        <button>Comece a escrever</button><!-- botao do elemento -->
+       </div><!-- texto-destaque  -->
+
+     </div><!-- fim container  -->
+
+
+    </div><!--fim destaque  -->
+
+    <!-- inicio de tentencias  -->
+
+    <div class="container"><!-- container classe Pai que vai responder oelo espaço geral dos elementos  PRIMEIRA 1-->
+      <h2 class="titulo-tendencia"> tendencias no medium</h2><!-- titulos da tendencia -->
+
+      <div id="tendencias"><!-- aqui é onde os elementos serão flutuados SEGUNDA DIV -->
+
+        <!-- ESSA SEAPARAÇÃO DE DIV E OS ELEMENTOS QUE ESTAO DENTRO DELES A DIV PAI TEM DUAS DIVS FILHAS QUE SAO DIVIDIDAS
+         CADA DIV COM SEU ESPAÇO-->
+
+        <div class="item-tendecia"><!--TERCEIRA DIV conteudo da tendencia , ela tera uma largura especifica para que outras dives apareça por linha-->
+            <span class="numero">01</span><!-- numero do bloco -->
+            <!-- vamos usar position para definir uma posicao para o numero atraves da sua classe-->
+            <h4 class="icone1">Jamilton Damasceno</h4><!-- titulo do bloco --><!-- classe que contem o icone que vai atras do titulo-->
+            <h3><!-- texto do bloco -->
+                Lorem ipsum dolor sit, amet 
+                consectetur adipisicing elit. 
+                Accusamus aliquam
+            </h3>
+            <span>20 out -10 min leitura </span><!-- data e hora do bloco  -->
+        </div><!--classe item-tendencias conteudo das tendencias -->
+
+        <div class="item-tendecia"><!--TERCEIRA DIV conteudo da tendencia , ela tera uma largura especifica para que outras dives apareça por linha-->
+            <span class="numero">02</span><!-- numero do bloco -->
+            <!-- vamos usar position para definir uma posicao para o numero atraves da sua classe-->
+            <h4 class="icone2">Jamilton Damasceno</h4><!-- titulo do bloco --><!-- classe que contem o icone que vai atras do titulo-->
+            <h3><!-- texto do bloco -->
+                Lorem ipsum dolor sit, amet 
+                consectetur adipisicing elit. 
+                Accusamus aliquam
+            </h3>
+            <span>20 out -10 min leitura </span><!-- data e hora do bloco  -->
+        </div><!--classe item-tendencias conteudo das tendencias -->
+
+        <div class="item-tendecia"><!--TERCEIRA DIV conteudo da tendencia , ela tera uma largura especifica para que outras dives apareça por linha-->
+            <span class="numero">03</span><!-- numero do bloco -->
+            <!-- vamos usar position para definir uma posicao para o numero atraves da sua classe-->
+            <h4 class="icone3">Jamilton Damasceno</h4><!-- titulo do bloco --><!-- classe que contem o icone que vai atras do titulo-->
+            <h3><!-- texto do bloco -->
+                Lorem ipsum dolor sit, amet 
+                consectetur adipisicing elit. 
+                Accusamus aliquam
+            </h3>
+            <span>20 out -10 min leitura </span><!-- data e hora do bloco  -->
+        </div><!--classe item-tendencias conteudo das tendencias -->
+
+         <div class="item-tendecia"><!--TERCEIRA DIV conteudo da tendencia , ela tera uma largura especifica para que outras dives apareça por linha-->
+            <span class="numero">04</span><!-- numero do bloco -->
+            <!-- vamos usar position para definir uma posicao para o numero atraves da sua classe-->
+            <h4 class="icone4">Jamilton Damasceno</h4><!-- titulo do bloco --><!-- classe que contem o icone que vai atras do titulo-->
+            <h3><!-- texto do bloco -->
+                Lorem ipsum dolor sit, amet 
+                consectetur adipisicing elit. 
+                Accusamus aliquam
+            </h3>
+            <span>20 out -10 min leitura </span><!-- data e hora do bloco  -->
+        </div><!--classe item-tendencias conteudo das tendencias -->
+
+         <div class="item-tendecia"><!--TERCEIRA DIV conteudo da tendencia , ela tera uma largura especifica para que outras dives apareça por linha-->
+            <span class="numero">05</span><!-- numero do bloco -->
+            <!-- vamos usar position para definir uma posicao para o numero atraves da sua classe-->
+            <h4 class="icone5">Jamilton Damasceno</h4><!-- titulo do bloco --><!-- classe que contem o icone que vai atras do titulo-->
+            <h3><!-- texto do bloco -->
+                Lorem ipsum dolor sit, amet 
+                consectetur adipisicing elit. 
+                Accusamus aliquam
+            </h3>
+            <span>20 out -10 min leitura </span><!-- data e hora do bloco  -->
+        </div><!--classe item-tendencias conteudo das tendencias -->
+
+        <div class="item-tendecia"><!--TERCEIRA DIV conteudo da tendencia , ela tera uma largura especifica para que outras dives apareça por linha-->
+            <span class="numero">06</span><!-- numero do bloco -->
+            <!-- vamos usar position para definir uma posicao para o numero atraves da sua classe-->
+            <h4 class="icone6">Jamilton Damasceno</h4><!-- titulo do bloco --><!-- classe que contem o icone que vai atras do titulo-->
+            <h3><!-- texto do bloco -->
+                Lorem ipsum dolor sit, amet 
+                consectetur adipisicing elit. 
+                Accusamus aliquam
+            </h3>
+            <span>20 out -10 min leitura </span><!-- data e hora do bloco  -->
+        </div><!--classe item-tendencias conteudo das tendencias -->
+
+
+      </div><!-- tendencias -->
+
+    </div><!-- container -->
+
+    <div class="rodape"><!-- contem a classe pai do roda pe -->
+        <div class="container"><!-- contaem a classe filho do rodape  -->
+            <h5>todos os direitos reserdos</h5><!-- conteudo do rodapé -->
+        </div><!--container  -->
+    </div><!-- rodape  -->
+
+        <!--  -->
+</body>
+</html>

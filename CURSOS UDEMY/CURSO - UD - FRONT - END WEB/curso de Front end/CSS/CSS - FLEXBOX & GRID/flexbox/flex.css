@@ -1,0 +1,33 @@
+
+body{
+    background-color: black;
+}
+
+.container-flex{/* classe pai  */
+    width: 180px;
+    height: 180px;
+    border: 4px solid red;
+    display: flex; /* display flex , para poder manipular os elementos dentro da classe */
+    /*para manipular os elementos servem alguns tipos de flex
+    flex-direction: row - ele serve para colocar os elementos inline um do lado do outro
+    flex-direction: column - ele coloca os elmentos um abaixo do outro 
+    existe uma forma de voce inverteer a ordem dos elmentos chamado de row-riverse*/
+    /*flex-wrap: nowap - deixa os itens um do lado do outro porem ele nao limita as mergens e a ultima box vai ser conrtada
+    flex-wrap: wrap - ele vai pacotar os intem ele vai fazer que os itens cabem dentro do container
+    */
+    /*overflow: hidden;*/ /* ele vai mascarar os elementos dentro dele */
+    flex-direction: row;
+    flex-wrap: wrap;/*as caixas ficam todas dentro do caixa maior*/
+    /*flex-flow:  row wrap; é uma junção dos dois*/
+    
+}
+
+.container-flex > div { /* esse sao ad divs dentro do container */
+    border: 4px solid white;
+    color: white;/* */
+    padding: 4px;/* espaçamento interno */
+    margin: 4px;/* margem do elemento pai */
+}
+
+
+/* */

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando elementos</title>
+</head>
+<style>
+    
+
+</style>
+<body>
+    <!-- 
+    Formulario com js 
+    
+    -->
+
+    <form name="cadastro">
+        <input type="text" name="nome" id="nome">
+        <input type="email" name="email" id="email">
+        <select name="sexo" id="sexo"><!-- criando um fomrulario onde tera as opçoes para serem selcionadas-->
+            <option value="">---</option>
+            <option value="masculino">masculino</option>
+            <option value="feminino">feminino</option>
+        </select>
+
+        
+    </form>
+    <button onclick="salvar()">salver</button>
+
+    
+    <script>
+      /*  fazendo com que ele pegue o nome do input e deixe a mostra em um texto nos campos do formulario quando o botao e ativado
+        function salvar(){
+          document.cadastro.nome.value = "nome"//criando a função onclick pra selecionar o sexo masculino
+          document.cadastro.email.value = "emial"//criando a função onclick pra selecionar o sexo masculino
+          document.cadastro.sexo.value = "masculino"//criando a função onclick pra selecionar o sexo masculino
+        }
+      */
+       
+      /*
+    //pegar as informações que o usuario digitou no fomrulario
+  function salvar(){
+    let nome = document.cadastro.nome.value//pegando o valor do input nome
+    let email = document.cadastro.email.value//pegando o valor do input email 
+    let sexo = document.cadastro.sexo.value//pegando o valor do input sexo
+
+    console.log(nome)
+    console.log(email)
+    console.log(sexo)
+  }  
+        */
+
+        //outra forma de pegar os valores do formulario 
+
+        function salvar(){
+            const obj = document.getElementById("nome")
+            console.log(obj.value)
+        }
+       
+    </script>
+
+
+
+    
+</body>
+</html>

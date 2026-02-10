@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        li{
+            background-color: lightblue;
+            padding: 10px 10px;
+            margin: 5px;
+            list-style: none;
+        }
+        
+           
+       
+    </style>
+
+    <h1>Adicionando elementos dentro da UL > li </h1>
+
+   
+
+   <ul id="itens">
+    <li>welik</li>
+    <li>carlos</li>
+   </ul>
+   <!-- Adcionar e remover itens da lista -->
+
+   <button onclick="adicionar()">Adicionar</button>
+   <button onclick="remover()">Remover</button>
+
+    <script>
+
+        
+        /*
+        const obj = document.getElementById('conteudo');
+        obj.textContent = "novo conteudo adicionado js text content "; substitui o conteudo
+        obj.innerHTML = "<h2>novo conteudo adicionado js innerHTML </h2>"
+        */
+        /*
+        const ul = document.getElementById('itens')
+        const li = document.createElement('li')//cria o elemento que voce quiser , nesse caso o li 
+        li.textContent = "adicionado via js"
+        ul.appendChild(li)//adiciona o elemento criado dentro da ul 
+         */
+
+         const ul = document.getElementById('itens')// pega o elemento ul
+         let contador = 0 // vai começar com zoro no contador 
+         
+         function adicionar(){ 
+            contador++ // depois ele vai adicionar com o contador um a um 
+            const texto = document.createTextNode(`adiconado ${contador}`)// cria um elemento texto detro da li
+            const li = document.createElement('li')// cria um elemento li 
+            li.appendChild(texto)
+            ul.insertBefore(li, ul.children[0])
+            
+         }
+
+         function remover(){
+            
+            if(ul.lastElementChild){ // verifica se existe algum elemento li dentro da ul 
+                ul.removeChild(ul.lastElementChild)// remove o ultimo li 
+                contador-- // o contador diminui
+
+            }
+         }
+
+         
+
+        
+        
+    
+       
+
+    </script>
+    
+</body>
+</html>

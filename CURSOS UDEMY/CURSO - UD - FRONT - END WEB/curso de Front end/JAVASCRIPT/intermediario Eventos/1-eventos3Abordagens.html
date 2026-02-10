@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .botao{
+            padding: 20px 50px;
+            cursor: pointer;
+        }
+    </style>
+    <h1>Rotinas de tramento de eventos DOM tradicionais </h1>
+        <!--jeito de fazer: elemento.event = nomeDaFuncao
+        
+            elemento = nó selecionado
+            evento = adicionado ao nó precedido da palvra 'on' ex onclick
+            função = a er chamada sem parêntese 
+-->  
+        
+        
+        
+        
+    
+   <button botao-acao >clique</button>
+</body>
+<script>
+    function executar(){
+        alert('executar normalmente')
+        //remover o evento
+        botao.removeEventListener('click',executar)
+
+    }
+//const botao = document.getElementById('botao')
+//botao.onclick = executar
+
+const botao = document.querySelector('[botao-acao]')
+botao.addEventListener('click', executar)
+   
+if(botao.addEventListener){
+ botao.addEventListener('click', executar)
+}else{
+    boatao.attachEvent('click', executar)
+}
+
+
+</script>
+</html>
