@@ -1,0 +1,12 @@
+a{
+    color: green;
+}
+
+p{
+    color: orange;
+}
+
+ul > li{
+    border: 1px solid black;
+    background-color: rgb(83, 171, 231);
+}

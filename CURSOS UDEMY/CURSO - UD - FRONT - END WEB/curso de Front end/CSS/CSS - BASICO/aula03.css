@@ -1,0 +1,19 @@
+.nav{
+    background-color: rgb(31, 94, 171);
+}
+.logo{
+    width: 300px;
+}
+a{
+    color: white;
+}
+
+span{
+    background-color: white;
+}
+
+.banner{
+    background-color: blueviolet;
+    width: 100%;
+    
+}
