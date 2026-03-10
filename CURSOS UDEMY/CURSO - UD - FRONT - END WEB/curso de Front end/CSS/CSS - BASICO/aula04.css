@@ -1,0 +1,12 @@
+h1{
+    border: 3px solid rgb(255, 111, 0);
+    padding: 20px;
+    color: white;
+    background-color: orange;
+}
+
+p{
+    border: 3px solid black;
+    padding: 20px;
+    background-color: rgb(198, 195, 195);
+}
