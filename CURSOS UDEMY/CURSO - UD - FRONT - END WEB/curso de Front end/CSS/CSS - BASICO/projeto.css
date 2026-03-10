@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(200, 202, 200);
+    padding: 20px ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.caixa{
+    border: 1px solid black;
+    padding: 30px;
+    background-color: white;
+}
+
+.caixa > h1{
+    color: rgb(160, 5, 162);
+}
+
+.caixa> img{
+    border: 1px solid purple;
+}
+.caixa > p{
+    color: rgb(75, 72, 72);
+}
+
+span{
+    color: black;
+}
+
+p{
+    width: 55%;
+}
