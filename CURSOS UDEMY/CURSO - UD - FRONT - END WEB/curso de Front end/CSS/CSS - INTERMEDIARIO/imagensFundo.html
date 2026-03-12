@@ -7,12 +7,105 @@
 </head>
 <style>
 
+    .container{
+        width: 60%;/* define que o tamanho da minha largura de tela fosse em 80%*/
+        margin: 100px auto;/* define que ele teria uma margem top de 100px e as demais seriam altomaticas*/
+        justify-items: center;/*centralizei meu container no centro*/
+        /*centralizando o conteudo dentro da div container */
+        background-color: lightcoral;
+        display: flex;/*colando um card ao lado do outro*/
+        justify-content: center;/* com dois cards , eu consegui colocalos ao centro da tela */
+    }
 
+.caixa{
+    width: 700px;
+    height: 300px;
+    border: 3px dotted red;
+    background-color: lightgreen;
+    background-image: url('../img/css-3.png');/* define a imagem dentro da div */
+    background-repeat: no-repeat;/* define que a imagem nao seja repetida */
+    background-position: left center;/* define a posição da imagem que esta dentro da caixa */
+    background-size: 100px;/* define o tamano da imagem dentro da caixa */
+}
 
+ .card{
+    width: 200px;
+    height: 39vh;
+    border: 1px solid red;
+    background-color: aqua;
+    text-align: center;
+    margin-left: 30px;
+ }
+
+ .card-img{
+    padding: 80px;
+    border: 1px solid black;
+    background-image: url('../img/html-5.png');
+    background-repeat: no-repeat;
+    background-size: 80px;
+    background-position: center center;
+ }
     
 </style>
 <body>
 
+    <div class="caixa">
+        <h1>Titulo do texto</h1>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+          Doloribus cupiditate voluptate, quis sit unde odit, ipsa eum 
+          eatae ea incidunt ratione? Amet voluptas, iure saepe asperiores 
+          quisquam dolorum excepturi nostrum!
+    </div>
+
+   <div class="container">
+     <div class="card">
+        <div class="card-img"> </div>
+        <div class="conteudo">
+            <h1>Card 1</h1>
+            <p> 
+                produto aqui especificado dentro dessas 
+                questoes
+            </p>
+        </div>
+        <button>Clique aqui</button>
+    </div>
+
+     <div class="card">
+        <div class="card-img"> </div>
+        <div class="conteudo">
+            <h1>Card 1</h1>
+            <p> 
+                produto aqui especificado dentro dessas 
+                questoes
+            </p>
+        </div>
+        <button>Clique aqui</button>
+    </div>
+
+     <div class="card">
+        <div class="card-img"> </div>
+        <div class="conteudo">
+            <h1>Card 1</h1>
+            <p> 
+                produto aqui especificado dentro dessas 
+                questoes
+            </p>
+        </div>
+        <button>Clique aqui</button>
+    </div>
+ <div class="card">
+        <div class="card-img"> </div>
+        <div class="conteudo">
+            <h1>Card 1</h1>
+            <p> 
+                produto aqui especificado dentro dessas 
+                questoes
+            </p>
+        </div>
+        <button>Clique aqui</button>
+    </div>
+
+   </div>
     
     
 </body>
