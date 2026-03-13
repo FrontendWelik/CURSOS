@@ -1,0 +1,30 @@
+
+    body{
+        background: #d2d2c1 url('../../img/fundo.png');/* imagem de fudo do site*/
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        justify-items: center;/*centraliza na minha tela o item */
+        
+
+    }
+
+    .principal{
+        width: 900px;/*defindo uma largura maxima*/
+    }
+
+    .menu{
+        background: #c5c5b2;
+        padding: 15px;
+        text-align: center;/*centralizando meu texto no centro*/
+    
+    }
+
+    a{
+        text-decoration: none;/*limapando a formatação do meu link*/
+    }
+
+    .rodape{
+        text-align: center;
+        padding: 20px;
+        background: #c5c5b2;
+    }
+

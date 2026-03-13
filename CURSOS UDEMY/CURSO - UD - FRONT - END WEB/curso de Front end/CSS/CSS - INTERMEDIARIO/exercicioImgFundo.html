@@ -13,12 +13,13 @@ body{
 }
 
 .caixa-texto{
-    width: 90%;
-    padding: 20px;
-    background-image: url('../img/fundo-h1.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    padding: 0.5em 1em;/*espaçamento interno dos elementos */
+    background-image: url('../img/fundo-h1.png') ;/* a imagem de fundo dentro da div */
+    background-repeat: repeat-x;/* pedindo para ele repetir somento no eixo horizontal*/
+    background-color: #d9d7b6 ;/* colocando uma cor da mesma tonalidade da imagem para preencher a lacuna*/
+
 }
+
 
 h2{
     color: rgba(74, 63, 48, 0.687);
@@ -27,7 +28,6 @@ h2{
 </style>
 <body>
     <h1>Logo do Site</h1>
-
     <div class="caixa-texto">
        <h2>Titulo do texto</h2>
        <p>
