@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .caixaPai{
+            border: 1px solid black;
+            width: 500px;
+            height: 500px;
+            position: relative;
+            margin: 10px auto;
+        }
+
+        .caixa1{
+            border: 1px solid green;
+            background-color: lightblue;
+            width: 100px;
+            height: 100px;
+            top: 20px;
+            left: 20px;
+            z-index: 0;
+            position: relative;
+        }
+
+        .caixa2{
+            border: 1px solid blue;
+            background-color: lightgoldenrodyellow;
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            z-index: 1;
+        }
+    </style>
+
+    <div class="caixaPai">
+        <div class="caixa1"> caixa 1</div>
+        <div class="caixa2"> caixa 2</div>
+
+    </div>
+    
+</body>
+</html>
