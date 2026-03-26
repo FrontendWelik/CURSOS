@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        
+        #menu{/*classe Pai*/
+         width: 600px;/* largura da caixa pensando no tamanho dos elementos*/
+         border: 1px solid rgb(249, 220, 5);
+         margin: 10px auto;/* uma margim aplicada direto no elemento para que ele crie uma margem e centralize dentro do body*/
+         padding: 20px;/* espaçamento interno*/
+
+        }
+        h1{
+            width: 500px;/*tamanho da caixa*/
+            border: 1px solid red;
+            margin:10px auto;
+            text-align: center;/*centralizar o trexto dentro da caixa*/
+        }
+
+        ul{/* caixa onde fica a lista*/
+            border: 1px solid green;/* mostando como e onde esta a caixa pai da lista */
+            background-color: black;
+        }
+        ul::after{/* depois , para que quando se flutue elementos ele ainda fique dentro da caixa pai */
+            content: " ";
+            clear: both;
+            display: block;
+        }
+        li{/* a lista que contem os links*/
+            width: 100px;/* para deixar o tamanho da caixa da lista*/
+            padding: 10px;/*espaçamento interno dela */
+            list-style: none;/* para sumir com o padrao de stylo da lista*/
+            border: 1px solid blue;
+            text-align: center;/* centralizar o texto dentro da caixa da lista*/
+            float: left;/* flutuar os elementos um ao lado do outro*/
+            cursor: pointer;
+            margin: 5px;/* da um espaço entre eles */
+            border-radius: 20px;
+        }
+        a{/*o link */
+            text-decoration: none;
+             border: 1px solid;
+             color: white;
+        }
+
+         li:hover{
+            background-color: lightsalmon;
+        }
+
+        .cont{
+            border: 1px solid skyblue;
+            width: 600px;
+            margin: 10px auto;
+            padding: 20px;
+        }
+        
+
+    </style>
+
+    <h1>Menu de navegação Horizonal </h1>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Carrinho</a></li>
+            <li><a href="#">Produtos</a></li>
+        </ul>
+
+    </div>
+
+    <div class="cont">
+
+        <h2>conteudo</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo laboriosam aperiam 
+        enim dignissimos architecto, itaque rerum error, 
+        porro necessitatibus ex accusantium aut sed, minus quia voluptas consequatur? Id, 
+        odit sed.
+    </div>
+    
+</body>
+</html>
