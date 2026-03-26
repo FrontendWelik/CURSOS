@@ -3,10 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS avançado - estilos e responsividade/elementos flutuantes/execicio1.css">
     <title> Elementos flutuantes </title>
 </head>
 <body>
+    <style>
+        
+/* minha respostas*/
+
+/*criando o clear para limapar e fazer os elementos ficarem da forma certa um abaixo do outro
+nao um em cima do outro*/
+/*.limpar{ clear: both;   */  /*lima o efeito de flutuar, se o elemento estiver a direita limpe ele a direita*/
+
+#container{/* classe pai*/
+    border: 1px solid red;
+    background-color: lightblue;
+    width: 980px;/*lagura da classe pai*/
+    /* height: 500px; uma das maneiras de como solucionar o problema para que o conteudo nao fique junto*/
+    /*utilizando o float e nao definindo um right ele acaba ficando em cima de outro elemento */
+    margin: 0 auto;
+}
+
+#container::after{/*uma forma de resolver o problema da flutuação*/ /*se voce definir higt: em algum elemento ele nao ora funcionar*/
+ content: "";
+ clear: both;
+ display: block;
+}
+.bo{
+    margin: 10px;/*margin de espaço da classe filho para a classe pai - sub classe */
+}
+
+.box1{/* primeira classe filho*/
+    width: 500px;/*largura da minha calsse filho*/
+    float: left;/*flutuando ela a esquerda , para colocar uma ao lado da outra*/
+    margin: 10px;
+}
+
+p{
+    padding-bottom:20px ;
+}
+.box2{/* segunda classe filho*/
+    width: 300px;/*largura da minha calsse filho*/
+    float: right;/*flutuando ela a direita , para colocar uma ao lado da outra*/
+    
+
+}
+
+.bot{/*classe filho do filho , ela esta dentro da classe filho*/
+ border: 1px solid black;
+ padding: 8px 10px;/*espaçamento interno da classe*/
+ margin: 10px/*definindo um espaço entre os elementos dentro da classe filho*/
+}
+
+
+
+/* as respostas */
+
+/* faz o papel da container*/
+#principal{
+    width: 920px;
+    margin: 0 auto;
+   /* height: 500px; uma das maneiras de como solucionar o problema para que o conteudo nao fique junto*/
+    /*utilizando o float e nao definindo um right ele acaba ficando em cima de outro elemento*/
+}
+
+#principal::after{/*uma forma de resolver o problema da flutuação, ele vai funcionar como depois do elemento*/
+ content: "";/*voce adicionou um conteudo vazio*/
+ clear: both;/* voce limap ambas as parte bolth = ambos (esquerda"left" -  direira"right")*/
+ display: block;/*voce diz que o display é em bloco*/
+}
+
+/* faz o papel da box1*/
+.conteudo{
+    width: 600px;
+    float: left;
+}
+/* faz o papel da box2*/
+.lateral{
+    width: 300px;
+    float: right;
+}
+/*faz o papel do bot*/
+.marcacao{
+    border: 1px solid black;
+    padding: 8px;
+    margin: 2px 8px;
+}
+
+#rodape{
+    background-color: aliceblue;
+    width: 920px;
+    margin: 0 auto;
+    display: inline;/*o display block ele fica em bloco e fica um abaixo do outro 
+     e inline ele fica um do lado do outro*/
+}
+
+    </style>
 
     <!-- exercicio 1 minha respostas -->
 
