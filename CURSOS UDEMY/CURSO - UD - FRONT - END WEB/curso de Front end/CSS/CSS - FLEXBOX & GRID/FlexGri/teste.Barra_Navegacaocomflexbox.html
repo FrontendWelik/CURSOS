@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de navegação com FlexBox </title>
+</head>
+<body>
+
+    <style>
+        body{
+            background-color: black;
+        }
+
+        .navbar{/* classe pai barra de navegação*/
+            border: 1px solid cadetblue; /* borda da barra */
+            width: 650px;/* largura definida da barra */
+            display: flex;/* display felx que faz com que os elementos dilhos sejam distribuidos */
+            justify-content: center;/* ele centraliza os elementos dentro da classe navbar */
+            margin: 10px auto;/* ele centraliza a classe navbar ao meio do body*/
+            border-radius: 10px;/* bordar para ver o elemento */
+            position: fixed;/*fixa a posição*/
+            left: 32.9%;/*a posição fixa sai do eixo de centro que definimos , mas podemos coloca-lo usando essas propriedades*/
+            z-index: 50;
+        }
+
+        .navbar > div {/* herança , chamando o filo dentro da classe do pai e dando a ele uma propriedade */
+            margin: 10px;/* uma margin leve dos elementos filhos */
+        }
+
+        .navbar div a{/*espessificando as classes e chamando o elmento filho dentro do elemento filho  */
+            width: 80px;/* largura maxima dos elementos */
+            height: 30px;/* altura dos elementos */
+            color: thistle;/* cor do texto */
+            text-decoration: none;/* remoção do sublinhado */
+            align-items: center;/* alinhamento vertical dos elementos */
+            display: flex;/* display flex para alinhamento horizontal */
+            justify-content: center;/* para alinha os elmentos ao centro da classe */
+        }
+
+        .navbar div a:hover{/* dando uma leve animação para os elementos , assim que o moude passar por cima */
+            background: #333;/* uma cor de fundo leve  */
+            color: tomato;/* acor dos elementos */
+            border-radius: 10px;/*  arredondamento dos cantos*/
+        }
+
+        .caixa{
+            width: 1010px;
+            height: 700px;
+            border: 1px solid white;
+            margin: 20px auto;
+            padding: 50px;
+            position: relative;/*para poder usar o top*/
+            color: thistle;
+            top: 80px;/* para usar o top é necessario usar um position*/
+            z-index: 1;
+            
+        }
+        footer{
+            width: 1010px;
+            height: 300px;
+            border: 1px solid rgb(233, 13, 13);
+            margin: 20px auto;
+            padding: 50px;
+            position: relative;
+            color: thistle;
+            top: 80px;
+            z-index: 1;
+            
+        }
+
+    </style>
+
+    <nav class="navbar">
+        <div><a href="#">Home</a></div>
+        <div><a href="#">Mais</a></div>
+        <div><a href="#">Sobre</a></div>
+        <div><a href="#">Contato</a></div>
+    </nav>
+
+    <div class="caixa">
+        <div> bloco 1</div>
+    </div>
+
+    <div class="caixa">
+        <div> bloco 2</div>
+    </div>
+
+    <div class="caixa">
+        <div> bloco 3</div>
+    </div>
+
+    <div class="caixa">
+        <div> bloco 4</div>
+    </div>
+
+    <footer>
+        <div> tudo acabado</div>
+    </footer>
+    
+</body>
+</html>
