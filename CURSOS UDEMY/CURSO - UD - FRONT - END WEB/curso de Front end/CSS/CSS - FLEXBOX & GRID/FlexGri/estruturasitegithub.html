@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura site github</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #080a41;
+            margin: 0;
+            border: 0;
+        }
+
+        .container{
+            width: 972px;
+            height: 450px;
+            border: 1px solid white;
+            margin: 10px auto;
+            padding: 10px 24px;
+            position: relative;
+            top: 20px;
+        }
+        .titulo{
+            height: 400px;
+            border: 1px solid red;
+            display: flex;
+            position: relative;
+            top: 20px;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .container .titulo h1{
+            width: 750px;
+            border: 1px solid green;
+            color: white;
+            padding: 10px;
+            text-align: center;
+             margin: 10px auto;
+            font-size: 50px;
+        }
+
+        .container .titulo p{
+            width: 550px;
+            border: 1px solid rgb(0, 100, 128);
+            color: white;
+            padding: 10px;
+            margin: 10px auto;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .container .titulo .btns{
+            border: 1px solid blue;
+            width: 650px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 10px auto;
+        }
+
+        button{
+            width: 280px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(20, 238, 20);
+        }
+
+        .bt2{
+            border: 1px solid white;
+            background-color: #080a41;
+            color: white;
+        }
+
+        .icontainer-icone{
+            width: 972px;
+            height: 220px;
+            border: 1px solid rgb(212, 8, 244);
+            margin: 10px auto;
+            padding: 10px 24px;
+            position: relative;
+            top: 20px;
+        }
+        .icontainer-icone img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px auto;
+        }
+
+
+        .cod{
+            width: 1250px;
+            border: 1px solid rgb(8, 209, 244);
+            margin: 10px auto;
+            padding: 10px 24px;
+            position: relative;
+            top: 20px;
+        }
+
+        section{
+            width: 100%;
+            height: 1580px;
+            position: relative;
+            top: 20px;
+            background-color: #0b0f1c;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content:start;
+             align-items: center;
+        }
+
+        .navbar{
+            width: 700px;
+            height: 50px;
+            position: relative;
+            top: 20px;
+            border: 1px solid red;
+            margin: 20px auto;
+            border-radius: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .navbar div{
+            width: 150px;
+            height: 40px;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar div a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        .section > .navbar > div:hover{
+            background-color: grey;
+            cursor: pointer;
+        }
+        .texto{
+            width: 700px;
+            border: 1px solid red;
+            color: white;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .texto p{
+            text-align: center;
+            font-size:20px;
+        }
+
+        .quadro{
+            width: 1250px;
+            height: 600px;
+            border: 1px solid rgb(8, 209, 244);
+            margin: 10px auto;
+            padding: 10px 24px;
+            position: relative;
+            top: 180px;
+        }
+        .branco{
+            width: 1150px;
+            height: 600px;
+           background-color: rgba(255, 255, 255, 0.384);
+            border: 1px solid rgb(223, 231, 232);
+            margin:0 auto;
+            box-shadow: 10px 10px 210px white;
+
+        }
+
+
+    </style>
+
+    <div class="container"> <!-- -->
+        <div class="titulo">
+            <h1> 
+                O futuro do desenvolvimento web
+                acontece aqui comigo na welik.com
+            </h1>
+            <p> 
+                as ferramentas do futuro , tecnologias modernas , os melhores designers
+                 sites responsivos , tudo isso e muito mais voce encontra aqui na welik.com
+            </p>
+            <div class="btns">
+                <button class="bt1">Entre em contato</button>
+                <button class="bt2">rede socias</button>
+
+            </div><!--btns -->
+        </div><!-- titulo -->
+    </div><!--container  -->
+
+    <div class="icontainer-icone">
+        <img src="icon-img.png" alt="">
+
+    </div>
+
+    <div class="cod">
+        <div>
+            <img src="cod-img.png" alt="">
+        </div>
+    </div><!-- cod -->
+
+    <section class="section">
+        <div class="navbar"> 
+            <div class="caixa"><a href="#">Projetos</a></div>
+            <div class="caixa"><a href="#">Sobre</a></div>
+            <div class="caixa"><a href="#">Contato</a></div>
+            <div class="caixa"><a href="#">Codigo</a></div>
+        </div>
+
+        <div class="texto">
+            <img src="" alt="">
+            <p>
+              Acelere todo o seu fluxo de trabalho
+              Desde a sua primeira linha de código até a implantação final,
+              o GitHub oferece ferramentas de IA e de automação para ajudar você 
+              a desenvolver e distribuir software melhor com mais rapidez.
+            </p>
+
+        </div>
+
+        <div class="quadro">
+               <div class="branco"> </div>
+        </div>
+
+    </section>
+    
+</body>
+</html>
