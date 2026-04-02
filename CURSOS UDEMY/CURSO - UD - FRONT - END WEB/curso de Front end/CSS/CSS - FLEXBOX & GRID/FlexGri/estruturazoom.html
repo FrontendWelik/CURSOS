@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copia zoom</title>
+</head>
+<body>
+
+    <style>
+        header{/* classe pai */
+            border: 1px solid green;
+            display: flex;/* definido como um container flutuante*/
+            justify-content: center;/*centraliza na horizontal*/
+            align-items: center;/* centraliza na vertical*/
+            padding: 20px;
+        }
+        nav{/*elemeneto filho*/
+            flex-grow: 1;  /*tamanho do elemento*/      }
+
+        nav ul{/*elemento filho do filho*/
+            border: 1px solid red;
+            display: flex;/*definido como um container flutuante*/
+            list-style: none;/*limpa o estilo de lista*/
+        }
+        ul a:link{/*os links dentro do elemento filho*/
+            padding: 30px;
+            margin-left: 20px;/*uma piquena margem à esquerda*/
+            text-decoration: none;/* decoração de texto não existe*/
+            color: rgb(14, 48, 222);
+        }
+
+        .btn{/*classe para os botões*/
+            border: 1px solid blue;
+            padding: 10px 20px;
+            margin-left: 20px;
+            text-decoration: none;
+            color: rgb(10, 10, 10);
+            border-radius: 20px;
+        }
+
+        .destaque{
+            background-color: rgb(14, 48, 222);
+            color: white;
+        }
+
+        .btn:hover{
+            background-color: royalblue;
+            color: yellow;
+        }
+
+
+    </style>
+
+    <header>
+        <img src="logo.svg" alt="">
+
+        <nav>
+           <ul>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Recursos</a></li>
+            <li><a href="#">Preços</a></li>
+            <li><a href="#">Planos e Preços</a></li>
+
+           </ul>
+        </nav>
+
+        <div>
+            <a class="btn" href="#">Entre em contato</a>
+            <a class="btn destaque" href="#">Saiba mais</a>
+        </div>
+    </header>
+    
+</body>
+</html>

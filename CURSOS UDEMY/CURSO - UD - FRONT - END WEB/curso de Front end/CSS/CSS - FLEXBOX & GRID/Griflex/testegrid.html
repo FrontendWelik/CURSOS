@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> testando o grid</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        .grid{
+        
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 30% 100px 400px;
+            row-gap: 20px;
+            column-gap: 20px;
+        }
+
+        .grid > div{
+            border: 1px solid lightskyblue;
+            color: white;
+        }
+        .item1{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .item2{
+            grid-row-start: 2;
+            grid-row-end: 6;
+        }
+
+        .item3{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 6;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 20px;
+            column-gap: 20px;
+            padding: 10px;
+        }
+
+        .navLateral{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .navLateral ul{
+            list-style: none;
+            border: 1px solid red;
+            padding: 20px;
+        }
+        .navLateral ul li{
+            padding: 20px;
+            border: 1px solid blueviolet;
+            display: flex;
+             margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .navLateral ul li a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .navLateral ul li:hover{
+            background-color: grey;
+        }
+
+        .quadros{
+           border: 1px solid red;
+           display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px;
+            box-shadow: 10px 10px 10px 10px rgba(255, 255, 255, 0.454);
+            border-radius: 30px;
+        }
+
+        img{
+            padding: 20px;
+        }
+
+    </style>
+
+
+<div class="grid">
+    <div class="item1"> 1 </div>
+    <div class="item2"> <!-- item2 -->
+        <div class="navLateral">
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">Sobre</a></li>
+                <li> <a href="#">Contato</a></li>
+                <li> <a href="#">Serviços</a></li>
+            </ul>
+        </div>
+    </div><!-- item2 -->
+
+
+    <div class="item3"> 
+        <div class="quadros">
+            <img src="layout.png" width="250" alt="">
+        </div>
+
+        <div class="quadros">
+            <img src="flexbox.png" width="250" alt="">
+        </div>
+
+        <div class="quadros">
+            <img src="css.png" width="250" alt="">
+        </div>
+
+        <div class="quadros">
+            <img src="mental-health.png" width="250" alt="">
+        </div>
+
+        
+    </div><!-- item3 -->
+
+
+    <div class="item4"> 
+
+        
+    </div><!-- item4 -->
+
+
+    <div class="item5">
+        
+    </div><!-- item5 -->
+
+    <div class="item6">
+        
+    </div><!-- item6 -->
+
+    <div class="item7"> 
+
+
+    </div><!-- item7 -->
+
+    <div class="item8"> 
+
+
+    <div class="item9">
+        
+    </div><!-- item9 -->
+
+    <div class="item10"> 
+        
+    </div><!-- item10 -->
+
+
+</div>
+    
+</body>
+</html>
