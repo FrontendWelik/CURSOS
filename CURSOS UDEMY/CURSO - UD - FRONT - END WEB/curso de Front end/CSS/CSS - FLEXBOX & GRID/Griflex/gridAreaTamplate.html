@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+
+        .grid{/* classe pai que contem o container*/
+            row-gap: 20px;/* espaço ente linhas*/
+            column-gap: 20px;/*espaço entre as colunas*/
+            display: grid;/* display em grades*/
+            grid-template-columns: 1fr 1fr;/* quantidade de colunas*/
+            grid-template-areas: /* areas da grade*/
+                  'navegacao navegacao'/* localidade em que cada area vai ficar  */
+                  'cabecalho principal'
+                  'rodape rodape'
+            ;
+
+        }
+
+        header { grid-area: cabecalho;}/* definindo o nome das areas para serem utilizadas no grid-tamplate-areas*/
+        nav { grid-area: navegacao;}
+        main { grid-area: principal;}
+        footer { grid-area: rodape;}
+
+        header, nav, main , footer{
+            border: 1px solid lightskyblue;
+            color: white;
+            padding: 20px;
+        }
+
+       
+
+    
+
+    </style>
+
+
+<div class="grid">
+   <header>Cabeçalho</header>
+   <nav>Home | Produtos | Contato | Login</nav>
+   <main>
+    <h2>Conteudo do sisitema</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Assumenda voluptatum non commodi ducimus. Facere fugiat architecto ex ad.
+        Distinctio delectus natus ab similique, labore nostrum. Illum voluptatum.
+        nobis praesentium necessitatibus.
+    </p>
+   </main>
+   <footer>Rodapé</footer>
+
+</div>
+    
+</body>
+</html>

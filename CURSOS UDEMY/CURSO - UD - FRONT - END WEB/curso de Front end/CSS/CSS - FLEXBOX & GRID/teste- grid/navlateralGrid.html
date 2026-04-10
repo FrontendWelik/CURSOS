@@ -8,43 +8,46 @@
 </head>
 <body>
     <style>
-        body{
-            background-color: #0B0F1C;
-            border: 0;
-            margin: 0;
-            padding: 0;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        body{/* o body*/
+            background-color: #0B0F1C;/* cor do body */
+            border: 0;/* borda */
+            margin: 0;/* a margem */
+            padding: 0;/* espaçamento interno */
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;/* a font da pagina*/
         }
         /*grid de navegação */
        
         .container-grid{/*container pai*/
-            height: 100vh;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 30% 100px 400px;
-            row-gap: 20px;
-            column-gap: 20px;
+            height: 100vh;/* autura do container*/
+            display: grid;/* fazendo o container em grades*/
+            grid-template-columns: 1fr 1fr 1fr;/* defindo as linhas da coluna ex: a coluna 1 vai ate a 3  */
+            grid-template-rows: 30% 100px 400px;/* definindo as linhas que a linha 1 vai ate a linha 4*/
+            row-gap: 20px;/* espaço veertical entre as linhas */
+            column-gap: 20px;/* espaço horizontal entre as colunas */
+
+            border: 1px solid rgb(235, 220, 13);
         }
         nav{/*barra de navegação vertical */
-            width: 280px;
-            border-right: 1px solid rgb(63, 65, 63);
-            box-shadow: 10px 0px 20px rgba(255, 255, 255, 0.105);
-            grid-row-start: 1;
-            grid-row-end: 5;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 280px;/* tamnho da barra de navegação */
+            border-right: 1px solid rgb(63, 65, 63);/* borda direita*/
+            box-shadow: 10px 0px 20px rgba(255, 255, 255, 0.105);/* sompra na borda */
+            grid-row-start: 1;/* definindo onde começa */
+            grid-row-end: 5;/* */
+            padding: 20px;/*espaço interno */
+            display: flex;/* definindo um display flex dentro na nav*/
+            flex-direction: column;/*  em colunas */
+            align-items: center;/* alinhando o item ao centro*/
+            
                 
         }
-        i{
+        i{/*icone do botão */ 
             font-size: 20px;
             color: white;
             margin-left: 10px;
         }
 
         .container-grid >  div{ /* coteudo */
-            border: 1px solid red;
+            border: 1px solid red;  
             position: relative;
             display: flex;
             right: 280px;

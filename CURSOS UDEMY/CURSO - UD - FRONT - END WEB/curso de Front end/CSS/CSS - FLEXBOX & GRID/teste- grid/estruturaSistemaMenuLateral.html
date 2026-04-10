@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Menu lateral 2 </title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(4, 10, 26);
+            color: white;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .grid{/* classe pai que contem o container*/
+            max-width: 200vh;
+            height: 99vh;
+            row-gap: 0px;/* espaço ente linhas*/
+            column-gap: 10px;/*espaço entre as colunas*/
+            display: grid;/* display em grades*/
+            grid-template-columns: 1fr 1fr 1fr;/* quantidade de colunas*/
+            grid-template-areas: /* areas da grade*/
+                'navegacao principal card'/* localidade em que cada area vai ficar  */ 
+                'navegacao principal card'
+            ;
+
+           
+
+        }
+
+        nav{ grid-area: navegacao;}
+        main{ grid-area: principal;}
+        .card{ grid-area: card;}
+        footer{ grid-area: rodape;}
+
+
+       nav{
+        border-right: 1px solid rgb(58, 58, 56);
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+       
+       }
+
+        nav ul{
+        margin-top: 30px;
+        width: 240px;
+        height: 100%;
+        list-style: none;
+        padding: 20px;
+        
+       }
+
+       nav ul li{
+        padding: 10px;
+        width: 260px;
+        margin-left: -20px;
+        cursor: pointer;
+       }
+
+       .baixo{
+       position: relative;
+       top: 410px;
+       }
+
+       li a{
+        text-decoration: none;
+        color: white;
+        margin: 10px;
+       }
+
+       i{
+        margin: 20px;
+       }
+
+       li:hover{
+        background-color: rgba(42, 42, 41, 0.731);
+        border-right:1px solid rgb(0, 238, 255);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.482);
+        border-top:  1px solid rgba(255, 255, 255, 0.482);
+    }
+
+
+       main {
+        width: 100%;
+        position: relative;
+        right: 120px;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+       }
+
+       main > div{
+        border: 1px solid white;
+        margin: 10px;
+        width: 500px;
+        height: 400px;
+       }
+
+       main > div.cont1{
+        width: 98%;
+        grid-column: 1 / 3;
+       }
+
+       .card{
+        border-right: 1px solid rgb(58, 58, 56);
+        border-left: 1px solid rgb(58, 58, 56);
+        position: relative;
+        right: 80px;
+       }
+
+       img{
+        width: 80px;
+        border: 1px solid red;
+        position: relative;
+        top: 30px;
+        left: 80px;
+        cursor: pointer;
+       }
+
+    .rodape{
+        height: 80px;
+    }
+
+   .rodape p{
+        text-align: center;
+        color: grey;
+        padding: 20px;
+    }
+
+
+        
+
+    </style>
+
+
+<div class="grid">
+   <nav>
+    <img src="mental-health.png" alt="logo da maarca">
+    <ul>
+        <li class="novo">
+            <i class="bi bi-house-door-fill"></i>
+            <a href="#">Home</a>
+        </li>
+
+        <li class="novo">
+            <i class="bi bi-plus-lg"></i>
+            <a href="#">Novo</a>
+        </li>
+
+        <li>
+            <i class="bi bi-clock-fill"></i>
+            <a href="#">Fila</a>
+        </li>
+
+        <li>
+            <i class="bi bi-person-vcard"></i>
+            <a href="#">Atendimentos</a>
+        </li>
+
+        <li>
+            <i class="bi bi-x-octagon"></i>
+            <a href="#">Cancelados</a>
+        </li>
+
+        <li>
+            <i class="bi bi-wallet2"></i>
+            <a href="#">Caixa</a>
+        </li>
+        
+        <li class="baixo">
+           <i class="bi bi-gear-fill"></i>
+            <a href="#">Configurações</a>
+        </li>
+
+        <li class="baixo">
+            <i class="bi bi-box-arrow-right"></i>
+            <a href="#">Fechar</a>
+        </li>
+
+
+    </ul>
+    <div class="rodape">
+       <p> Sistema desenvolvido welik.com @2026</p> 
+    </div>
+   </nav>
+
+   <main>
+    <div class="cont1">Titulo</div>
+    <div class="cont2">conteudo</div>
+    <div class="cont3">conteudo</div>
+   </main>
+
+   <div class="card">
+    conteudo extra
+   </div>
+
+</div>
+    
+</body>
+</html>
