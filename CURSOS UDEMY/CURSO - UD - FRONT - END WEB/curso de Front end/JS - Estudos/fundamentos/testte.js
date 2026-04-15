@@ -1,19 +1,27 @@
-let idade = 17;
-let nome = "joao";
-let pedidoMinimo = 100;
+ //funçao valida nome 
+function nomes(){
+     let nome = "welik";
 
-if(idade >= 18 ){
-   console.log("Você pode beber ");
+     if(nome == "welik"){
+      console.log("O nome é welik , esta certinho");
+     }else{
+      console.log("O nome é diferente de welik");
+     }
 
-}else {
-    console.log("voce é menor de idade");
 }
 
-if(pedidoMinimo >= 100){
-  console.log("voce ganhou frete gratis");
+nomes();
 
-}else if(pedidoMinimo <= 100){
-  console.log(" voce precisa gastar mais para ganhar frete gratis");
-}else{
-    console.log("valor invalido");
+//funçao valida numero
+
+function numeros(){
+  let numero = 11981682180;
+
+  if(numero == 11981682181){
+console.log("esta certo o numero");
+
+  }else{
+    console.log("esta errado o numero");
+  }
 }
+numeros();

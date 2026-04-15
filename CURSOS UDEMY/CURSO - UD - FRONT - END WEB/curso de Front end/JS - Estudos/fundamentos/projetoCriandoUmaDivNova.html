@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>criando uma div nova</title>
+</head>
+<body>
+    <style>
+        .pai{
+            border: 1px solid red;
+            width: 800px;
+            margin: 10px auto;
+            padding: 20px;
+        }
+
+        .filho form{
+            border: 1px solid blue;
+            width: 600px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        input{
+            margin-top: 8px;
+            padding: 10px;
+            border: 1px solid rgba(128, 128, 128, 0.562);
+            border-radius: 8px;
+        }
+
+        button{
+            width: 200px;
+            margin-top: 20px;
+            padding: 7px 50px;
+        }
+
+        #card{
+            display: none;
+            border: 1px solid green;
+            width: 600px;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        #card div{
+            border: 1px solid grey;
+            padding: 10px;
+            margin-top: 8px;
+        }
+
+    </style>
+
+    <div class="pai">
+        <div class="filho">
+            <form>
+                <label for=""> nome </label>
+                <input type="text" placeholder="Coloque seu nome" id="nome">
+
+                <label for=""> contato </label>
+                <input type="text" placeholder="Coloque seu contato" id="contato">
+
+                <label for=""> email </label>
+                <input type="text" placeholder="Coloque seu email" id="email">
+
+                <button onclick="criarCard()">criar</button>
+            </form>
+
+            <div id="card">
+                <div>nome</div>
+                <div>contato</div>
+                <div>email</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+<script>
+
+    function criarCard(){
+        //evitar que o fomrulario carregue a pagina 
+        event.preventDefault();
+
+        //pegar os valores dentro dos inputs e validar eles 
+        let nome = document.getElementById('nome').value
+        let contato = document.getElementById('contato').value
+        let email = document.getElementById('email').value
+
+        //validar os campos
+        if(nome === '' || contato === '' || email === ''){
+            alert("Preencha todos os campos");
+
+        }
+
+        // selecionar elemento Pai onde os novos cards serão inseridos
+        let containerPai = document.querySelector('.filho');
+
+
+        //Criar um novo elemento div para ser o card
+        const novoCard = document.createElement('div');
+
+        //adicionar o ID card para ele herdar o seu css e mudar o display para block
+        novoCard.id= "card";
+        novoCard.style.display = "block";
+
+        //inserir o conteudo html dentro dessa nova div
+        novoCard.innerHTML = `
+            <div>${nome}</div>
+            <div>${contato}</div>
+            <div>${email}</div>
+        `;
+
+        //colocar o novo card dentro do container pa
+        containerPai.appendChild(novoCard);
+         
+
+    }
+
+</script>
+    
+</body>
+</html>
