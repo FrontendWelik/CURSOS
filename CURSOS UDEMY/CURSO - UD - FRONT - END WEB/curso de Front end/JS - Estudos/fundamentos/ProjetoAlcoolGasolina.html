@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Preço do alcool e da gasolina</title>
+</head>
+<body>
+    <style>
+        #calcula{
+            width: 400px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 1px solid grey;
+        }
+        input, label{
+            display: block;
+            margin: 8px 0;
+        }
+        input{
+            width: 100%;
+            padding: 5px;
+        }
+        .resultado{
+            width: 100%;
+            background-color: lightblue;
+            color: blue;
+            padding: 10px;
+        }
+
+        button{
+            padding: 10px 30px;
+            background-color: lightblue;
+            border: 1px solid rgba(128, 128, 128, 0.372);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+
+    </style>
+    
+    <div id="calcula">
+        <h1>E melhor utilizar alcool ou gasolina?</h1>
+        <label for=""> Preço alcool</label>
+        <input type="text" placeholder=" digite o preço do alcool" id="alcool">
+        <br>
+        <label for=""> Preço gasolina</label>
+        <input type="text" placeholder="digite o preço da gasolina" id="gasolina">
+        
+        <div class="resultado" id="resultado">Resultado</div>
+        <br>
+        <button onclick="calcularPreco()">Calcular</button>
+    </div>
+</body>
+
+
+
+<script>
+
+function calcularPreco(){
+    
+    // validar os campos
+    let precoAlcool = document.getElementById('alcool').value
+    let precoGasolina = document.getElementById('gasolina').value
+    
+    if(precoAlcool != ""){
+        if(precoGasolina != ""){
+
+            /*  calcular os preços , se é melhor usar alcool ou gasolina
+            se valorAlcool / valorGasolina >= 0.7 é melhor usar Gasolina
+            se não é melhor utilizar alcool
+            */
+           let resultado = precoAlcool / precoGasolina;
+           if(resultado >= 0.7){
+            document.getElementById('resultado').innerHTML = "é melhjor utilizar gasolina";
+
+           }else{
+            document.getElementById('resultado').innerHTML = "é melhor utilizar alcool";
+           }
+
+
+
+        }else{
+            alert("preencha o preço do da gasolina ")
+        }
+        
+    }else{
+        alert("preencha o preço do alcool ");
+    }
+    
+
+}
+
+
+
+
+
+</script>
+</html>
