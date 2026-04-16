@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases Motivacionais </title>
+</head>
+<body>
+
+    <style>
+        .box{
+            width: 700px;
+            border: 1px solid grey;
+            background-color: rgba(128, 128, 128, 0.237);
+            padding: 30px;
+            margin: 200px auto;
+        }
+
+        .box h1{
+         color: rgb(8, 120, 8);
+         border-bottom: 1px solid rgba(128, 128, 128, 0.689);
+         padding-bottom: 20px;
+         font-size: 40px;
+        }
+
+        #frases{
+            font-size: 50px;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.689);
+            padding-bottom: 30px;
+            color: grey;
+        }
+
+        button{
+            width: 120px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid grey;
+            color: white;
+            background-color: rgb(8, 120, 8);
+            cursor: pointer;
+        }
+
+
+
+
+
+    </style>
+
+    <div class="box">
+        <h1>Frases motivacionais</h1>
+        <p id="frases">Frases motivacionais</p>
+        <button onclick="gerarFrase()">Nova frase</button>
+    </div>
+    
+</body>
+<script>
+
+    function gerarFrase(){// criari uma função para gerar as frases aleatorias dentro da array
+        const frases = [//array que contem as frases
+            "A persistencia é o caminho do exito",
+            "O sucesso é a soma de pequenos esforços repetidos dia após dia",
+            "Acredite em si mesmo e tudo será possível",
+            "Os limites só existem se você acreditar que eles existem",
+            "Não desista, o melhor ainda está por vir",
+            "Cada dia é uma nova oportunidade para melhorar"
+        ]
+
+    //gerar um numero aleatorio para escolher uma frase da array
+    //.Math.random() gera um numero aleatorio entre 0 e 1 e multiplica pelo tamanho do array 
+    //Math.floor() arredonda o numero para inteiro, garantindo que seja um indice valido da array
+    //length retorna o numero de elementos na array, garantindo que o indice gerado seja valido
+    let aleatorio = Math.floor(Math.random() * frases.length);
+    document.getElementById("frases").innerHTML = frases[aleatorio];
+    document.getElementById("frases").style.color = "rgba(5, 139, 241, 0.689)"//mudando a cor assim que a frase carregar
+    }
+
+
+
+
+
+
+</script>
+</html>

@@ -80,44 +80,76 @@
 
 <script>
 
-    function criarCard(){
-        //evitar que o fomrulario carregue a pagina 
-        event.preventDefault();
+   // 1. Função para carregar os dados do "banco" assim que a página abrir
+window.onload = function() {
+    renderizarCards();
+};
 
-        //pegar os valores dentro dos inputs e validar eles 
-        let nome = document.getElementById('nome').value
-        let contato = document.getElementById('contato').value
-        let email = document.getElementById('email').value
+function criarCard() {
+    event.preventDefault();
 
-        //validar os campos
-        if(nome === '' || contato === '' || email === ''){
-            alert("Preencha todos os campos");
+    // Pegar valores dos inputs
+    let nome = document.getElementById("nome").value;
+    let contato = document.getElementById("contato").value;
+    let email = document.getElementById("email").value;
 
-        }
+    if(nome === "") return alert("Preencha o nome!");
 
-        // selecionar elemento Pai onde os novos cards serão inseridos
-        let containerPai = document.querySelector('.filho');
+    // 2. Criar o objeto que representa o novo registro
+    const novoUsuario = {
+        nome: nome,
+        contato: contato,
+        email: email
+    };
 
+    // 3. Buscar a lista que já existe no LocalStorage ou criar uma vazia
+    let listaUsuarios = JSON.parse(localStorage.getItem("meuBanco")) || [];
 
-        //Criar um novo elemento div para ser o card
-        const novoCard = document.createElement('div');
+    // 4. Adicionar o novo usuário na lista
+    listaUsuarios.push(novoUsuario);
 
-        //adicionar o ID card para ele herdar o seu css e mudar o display para block
-        novoCard.id= "card";
+    // 5. Salvar a lista atualizada de volta no LocalStorage
+    localStorage.setItem("meuBanco", JSON.stringify(listaUsuarios));
+
+    // Limpar campos e atualizar a tela
+    document.querySelector("form").reset();
+    renderizarCards();
+}
+
+function renderizarCards() {
+    const containerPai = document.querySelector(".filho");
+    
+    // Limpar os cards antigos antes de desenhar os novos (para não duplicar)
+    // Mantemos apenas o formulário original
+    const formulario = containerPai.querySelector("form");
+    containerPai.innerHTML = "";
+    containerPai.appendChild(formulario);
+
+    // 6. Ler os dados do "banco"
+    let listaUsuarios = JSON.parse(localStorage.getItem("meuBanco")) || [];
+
+    // 7. Criar visualmente cada card que está no banco
+    listaUsuarios.forEach((usuario, index) => {
+        const novoCard = document.createElement("div");
+        novoCard.id = "card";
         novoCard.style.display = "block";
-
-        //inserir o conteudo html dentro dessa nova div
         novoCard.innerHTML = `
-            <div>${nome}</div>
-            <div>${contato}</div>
-            <div>${email}</div>
+            <div><strong>Nome:</strong> ${usuario.nome}</div>
+            <div><strong>Contato:</strong> ${usuario.contato}</div>
+            <div><strong>Email:</strong> ${usuario.email}</div>
+            <button onclick="deletarCard(${index})" style="width: 100px; background: #ff4d4d; color: white; border: none; margin-top: 10px; cursor: pointer;">Excluir</button>
         `;
-
-        //colocar o novo card dentro do container pa
         containerPai.appendChild(novoCard);
-         
+    });
+}
 
-    }
+// Função extra: para deletar um item do banco
+function deletarCard(index) {
+    let listaUsuarios = JSON.parse(localStorage.getItem("meuBanco")) || [];
+    listaUsuarios.splice(index, 1); // Remove o item da lista
+    localStorage.setItem("meuBanco", JSON.stringify(listaUsuarios)); // Salva a nova lista
+    renderizarCards(); // Atualiza a tela
+}
 
 </script>
     
