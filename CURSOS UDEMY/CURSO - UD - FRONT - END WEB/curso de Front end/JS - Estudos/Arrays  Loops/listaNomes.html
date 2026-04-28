@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de repetição </title>
+</head>
+<body>
+    <style>
+        .cont{
+            width: 1090px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .cont input{
+            padding: 8px;
+            border: 1px solid rgba(128, 128, 128, 0.461);
+            border-radius: 5px;
+        }
+
+        .cont button{
+            padding: 9px;
+            border: 0;
+            border-radius:5px ;
+            cursor: pointer;
+        }
+
+        .btn1{
+            background-color: rgb(15, 92, 206);
+            color: aliceblue;
+
+        }
+
+        .btn2{
+            background-color: orange;
+        }
+
+        .nm{
+            border: 1px solid rgba(128, 128, 128, 0.454);
+            padding: 10px;
+        }
+
+    </style>
+
+    <div class="cont">
+        <h1>Usuários</h1>
+        <input type="search" placeholder="pesquise um nome" id="campoNome" >
+        <button type="submit" class="btn1" onclick="pesquisarNome()">Pesquisar</button>
+        <button type="submit" class="btn2" onclick="carregarNomes()">carregar</button>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <div class="lista-grupo" id="lista">
+            <div class="nm">nenhum nome </div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let nomes = [
+            "welik",
+            "carlos",
+            "alycia",
+            "benjamin",
+            "bianca",
+            "jose",
+            "fernanda",
+            "juliana"
+        ];
+
+        // eu quero que quando eu clicar no botão carregar ele abra a l
+        // ista de nomes no meu campo de pesquisa
+
+        // usando estrutura de repetição 
+     
+        let intenLista = ''
+        function carregarNomes(){
+        
+            for(indice in nomes){
+               let nome = nomes[indice]
+
+               intenLista += ` <div class="nm"> ${nome}</div> `;
+            }
+            document.getElementById('lista').innerHTML = intenLista;
+        }
+
+        //quando o usuario clicar no pesquisar ele vai mostrar o nome pesquisado
+
+        function pesquisarNome(){//função do botão
+
+            let nomePesquisa = document.getElementById('campoNome').value;//pega o valor de input
+            let intensLista = '';// a variavel que tem o valor da lista de nomes
+
+            for(indice in nomes){// o nome esta no indice 
+                let nome = nomes[indice]; // aqui chamamos os dados que etão no indice nomes 
+                if( nomePesquisa == nome){ // condição do if , se o dados obtidos no nome pesquisa for igual as informações que esta no nome
+                    intenLista += ` <div class="nm"> ${nome}</div> `; // ele cria essa pagina html onde definimos 
+
+                }else{
+                     intenLista = ` <div class="nm">Esse nome não esta no nosso banco de dados</div> `;
+                }
+
+            }
+            document.getElementById('lista').innerHTML = intenLista;// para chamar o ID lista e mudar o HTML que criamos
+
+        };
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
