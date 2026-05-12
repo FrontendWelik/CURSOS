@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="destaque">Area de destaque</div>
+    <h1 class="vermelho">Titulo do site</h1>
+    <p>subtitulo</p>
+    <div>Area de conteudo 2</div>
+
+    <ul>
+        <li class="primeiro">item 1</li>
+        <li>item 2</li>
+    </ul>
+    <button onclick="mudarPromeiro()">Clique para mudar</button>
+
+    <script>
+       // const obj = document.getElementById('destaque');
+       const obj = document.querySelector(".vermelho");
+       obj.style.color = "red";
+
+function mudarPromeiro(){//criando a função que vai para o onclick
+    const primeiro = document.querySelector(".primeiro");//pegando o elemento com a classe primeiro
+    primeiro.innerHTML = "item 1 alterado com sucesso !"// colocando a nova informaçção dentro do elemento
+    //assim que o botão for clicado ele vai chamar a função mudarPrimeiro que vai pegar o elemento 
+    //com a classe e vai alterar o texto dele 
+}
+
+const tagNome = document.getElementsByTagName('div');
+for(let i = 0; i < tagNome.length; i++){
+    console.log("pegamos pelo tag html ")
+}
+
+const classe = document.getElementsByClassName('vermelho');
+console.log("pegamos pela nome da classe do elemento ")
+
+
+const nome = document.getElementsByName('nome');
+console.log("pegamos pelo nome do elemento, bastante usado em fomrularios ")
+
+
+const seletor = document.querySelectorAll('div');
+console.log("pegamos por meio de um seletor css, bastante usado para pegar elementos mais especificos ")
+
+
+    </script>
+    
+</body>
+</html>
