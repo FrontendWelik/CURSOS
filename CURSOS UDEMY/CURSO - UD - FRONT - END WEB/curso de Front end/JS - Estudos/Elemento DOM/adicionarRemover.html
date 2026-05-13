@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="conteudo">
+        Conteudo
+    </div>
+
+    <ul id="lista">
+        <li> welik </li>
+        <li> Carlos </li>
+       
+    </ul>
+
+    <p id="itemClonar">outro nome</p>
+
+    <button onclick="adicionar()">Adicionar</button>
+    <button onclick="remover()">Remover</button>
+
+    
+    <script>
+        /*
+        const obj = document.getElementById('conteudo');
+        obj.innerHTML = "<p style='color: red;'> Novo conteudo </p>";//alterando o conteudo do elemento
+        
+        const ul = document.getElementById('lista');
+        const li = document.createElement('li');//criando um novo elemento
+        ul.appendChild(li);//adicionando o elemento criado como filho da ul
+        li.textContent = "Novo item";//adicionando texto ao elemento criado
+*/
+
+        function adicionar(){
+            const ul = document.getElementById('lista');
+            const li = document.createElement('li');//criando elemento
+            const texto = document.createTextNode("novo item")
+            /*
+            ul.insertBefore(li, ulchildren[0])adicionando o elemento criado antes do primeiro filho
+
+            */
+
+            /*adicionar um paragrafo la dentro da lista*/
+            const itemClone = document.getElementById('itemClonar');
+            const item = itemClone.cloneNode(true);//clonando o elemento
+            ul.appendChild(item);
+
+            ul.appendChild(li);//adicionando o elemento criando como filho da ul
+            li.appendChild(texto)//adicionando o texto ao elemento criado
+            
+
+        }
+
+        function remover(){
+            const ul = document.getElementById('lista');
+            const li = ul.lastChild;
+            ul.removeChild(li);//removendo o elemento criado
+
+        }
+
+    </script>
+
+
+</body>
+</html>

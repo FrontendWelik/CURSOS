@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <span id="itens" quantidade="2">
+        2 itens no carrinho
+    </span>
+
+
+    <script>
+        const obj = document.getElementById('itens');
+        console.log(obj.getAttribute('quantidade'));//pegando o valor do atributo personalizado
+        obj.setAttribute('quantidade', '3');//alterando o valor do atributo personalizado
+
+
+    </script>
+    
+</body>
+</html>

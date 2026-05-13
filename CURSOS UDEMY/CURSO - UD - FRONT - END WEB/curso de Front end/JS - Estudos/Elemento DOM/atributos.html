@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+       
+
+    </style>
+
+    <img src="Design sem nome (2).png" width="500" alt="">
+    <a href="#" onclick="revelar()" id="link"> clica aqui</a>
+
+   
+
+    <script>
+
+        function revelar(){
+            const img = document.querySelector('img');
+            img.style.display = "block";// se a imagem estiver oculta ela aparece
+            img.src = "user.png";//pegando outra imagem 
+             
+            const link = document.querySelector('#link');
+            link.href = "https://www.google.com.br/";//pegando o link e colocando um endereço
+             link.textContent = "Google";//alterando o texto do link
+
+        }
+        
+
+        
+
+        
+
+    </script>
+    
+</body>
+</html>
