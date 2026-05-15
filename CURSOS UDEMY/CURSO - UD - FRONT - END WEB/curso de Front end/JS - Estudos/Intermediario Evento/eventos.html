@@ -31,7 +31,14 @@
             alert("botão clicado")
         })
 
-        botao.removeEventListener('click', executar)
+       
+
+        if(botao.removeEventListener ){
+            botao.removeEventListener('click', executar)
+
+        }else{
+            botao.detachEvent('onclick', executar)
+        }
 
         
 
